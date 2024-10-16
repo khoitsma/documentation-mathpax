@@ -18,3 +18,5 @@ Table of Contents
    Untitled-1.ipynb
    readme_doc.rst
    mix_function.md
+   mix_function.rst
+   unmix_function.rst
