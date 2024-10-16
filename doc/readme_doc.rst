@@ -2,7 +2,7 @@
     :format: html
 
 Interval_Filter
-====
+===============
 
 An example statistical function using Python and PyXLL_
 
