@@ -1,3 +1,4 @@
+```python
 @xl_func("int x, int n, int decimal_places: var")
 def stats_X(x, n, decimal_places=3):
     """Return a list of lists counting and comparing number of runs with each possible length
@@ -51,3 +52,4 @@ def stats_X(x, n, decimal_places=3):
         return output
     except:
         return 'Function error'
+```
