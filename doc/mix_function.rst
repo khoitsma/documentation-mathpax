@@ -2,7 +2,7 @@
     :format: html
 
 mix_func
-====
+========
 
 An example function to provide a list of x random values 
 
