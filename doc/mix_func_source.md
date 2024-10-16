@@ -20,7 +20,7 @@ def mix_func(x):
     """
     try:
         if x == 0:
-            # returned as a number to Excel
+            # return as a number to Excel
             return 0
 
         # return a list of values as an 'object'
