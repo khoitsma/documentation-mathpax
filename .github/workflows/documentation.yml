@@ -32,7 +32,7 @@ jobs:
           pip install jupyterlab_myst
           pip install jupytext
           pip install -U jupyter-book
-          tar xvzf $TGZ --strip-components 1 -C $DEST
+          sudo dpkg -i $DEB
       - name: Sphinx build
         run: |
           sphinx-build doc _build
