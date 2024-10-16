@@ -1,0 +1,46 @@
+name: documentation
+
+on: [push, pull_request, workflow_dispatch]
+
+permissions:
+  contents: write
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'   
+      - run: python --version
+      - name: Install dependencies
+        run: |
+          export PATH=$PATH:~/.local/bin
+          pip install Sphinx
+          pip install sphinx sphinx_rtd_theme
+          pip install sphinx-bootstrap-theme
+          pip install sphinx-book-theme
+          pip install cloud_sptheme
+          pip install myst_parser
+          pip install sphinx-bootstrap-theme
+          pip install docutils>=0.21
+          pip install myst_nb
+          pip install matplotlib
+          pip install numpy
+          pip install jupyterlab
+          pip install jupyterlab_myst
+          pip install jupytext
+          pip install -U jupyter-book
+          jupyter-book myst init doc/jup_KLH.md
+      - name: Sphinx build
+        run: |
+          sphinx-build doc _build
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+        with:
+          publish_branch: gh-pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: _build/
+          force_orphan: true
