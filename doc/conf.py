@@ -12,7 +12,7 @@ import sphinx_bootstrap_theme
 project = 'Mathpax Blog'
 copyright = '2024, Karl Hoitsma'
 author = 'K. Hoitsma'
-# release = '0.1'
+# release = '0.1 '
 
 html_logo = 'https://khoitsmahq.firstcloudit.com/images/mp_small3.png'
 # html_theme = 'sphinx13'
