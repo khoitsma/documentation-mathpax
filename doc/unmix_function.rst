@@ -18,5 +18,5 @@ Raises:
 
  | "empty" if function fails
 
-.. include:: mix_func_source.md
+.. include:: unmix_func_source.md
    :parser: myst_parser.sphinx_
