@@ -38,5 +38,8 @@ Example::
 
 returns
 
-.. include:: include.md
+.. include:: include_note.md
+   :parser: myst_parser.sphinx_
+
+.. include:: statsX_func_source.md
    :parser: myst_parser.sphinx_
