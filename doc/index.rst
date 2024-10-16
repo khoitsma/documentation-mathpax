@@ -19,3 +19,4 @@ Table of Contents
    readme_doc.rst
    mix_function.rst
    unmix_function.rst
+   notebooks/Myst_test
