@@ -41,7 +41,7 @@ returns
 .. include:: include.md
    :parser: myst_parser.sphinx_
 
-~~~
+----
 
 .. include:: statsX_func_source.md
    :parser: myst_parser.sphinx_
