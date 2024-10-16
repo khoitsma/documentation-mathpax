@@ -32,7 +32,6 @@ jobs:
           pip install jupyterlab_myst
           pip install jupytext
           pip install -U jupyter-book
-          # jupyter-book myst init doc/jup_KLH.md
       - name: Sphinx build
         run: |
           sphinx-build doc _build
