@@ -15,3 +15,4 @@ Table of Contents
    unmix_function.rst
    myst_notebook.md
    MystTest.ipynb
+   unmix_func_source.md
