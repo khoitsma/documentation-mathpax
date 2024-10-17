@@ -26,6 +26,7 @@ html_logo = 'https://khoitsmahq.firstcloudit.com/images/mp_small3.png'
 source_suffix = {
     '.rst': 'restructuredtext',
     '.txt': 'restructuredtext',
+    '.ipynb': 'myst-nb',
     '.md': 'markdown'
 }
 
@@ -33,7 +34,7 @@ source_suffix = {
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 # extensions = []
-extensions = ["myst_nb", 'myst_parser']
+extensions = ['myst_nb']
 
 templates_path = ['_templates']
 exclude_patterns = []
