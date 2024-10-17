@@ -39,5 +39,5 @@ ax.plot(x, y, 'b-', linewidth=2)
 glue("glued_fig", fig, display=False)
 ```
 
-This is an inline glue example of a figure: {glue:figure} glued_fig.
+This is an inline glue example of a figure: {glue:figure} `glued_fig`.
 This is an example of pasting a glued output as a block:
