@@ -28,7 +28,7 @@ source_suffix = {
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 # extensions = []
-extensions = ['myst_parser', "myst_nb"]
+extensions = ["myst_nb"]
 
 templates_path = ['_templates']
 exclude_patterns = []
