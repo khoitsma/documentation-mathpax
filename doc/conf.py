@@ -1,4 +1,5 @@
 import sphinx_bootstrap_theme
+import myst_nb
 # import cloud_sptheme
 
 # Configuration file for the Sphinx documentation builder.
@@ -27,7 +28,7 @@ source_suffix = {
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 # extensions = []
-extensions = ['myst_parser', "nbsphinx"]
+extensions = ['myst_parser', "myst_nb"]
 
 templates_path = ['_templates']
 exclude_patterns = []
