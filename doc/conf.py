@@ -22,7 +22,7 @@ html_logo = 'https://khoitsmahq.firstcloudit.com/images/mp_small3.png'
 #     '.rst': 'restructuredtext',
 #     '.txt': 'restructuredtext',
 #     '.md': 'markdown',
-}
+# }
 source_suffix = {
     '.rst': 'restructuredtext',
     '.txt': 'restructuredtext'
