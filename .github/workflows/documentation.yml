@@ -25,7 +25,6 @@ jobs:
           pip install myst_parser
           pip install sphinx-bootstrap-theme
           pip install docutils>=0.21
-          pip install myst_nb
           pip install matplotlib
           pip install numpy
           pip install jupyterlab
