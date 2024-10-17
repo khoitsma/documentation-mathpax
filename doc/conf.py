@@ -41,8 +41,6 @@ extensions = ['myst_nb']
 templates_path = ['_templates']
 exclude_patterns = []
 
-jupytext --set-kernel - notebook.md
-
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
