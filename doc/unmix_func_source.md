@@ -34,5 +34,5 @@ glue("glued_fig", fig, display=True)
 
 This is an inline glue example of a figure: {glue:}`glued_fig`.
 This is an example of pasting a glued output as a block:
-```{glue:} glued_fig
+```{glue:} 'glued_fig'
 ```
