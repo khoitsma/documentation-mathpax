@@ -22,7 +22,7 @@ jobs:
           pip install sphinx-bootstrap-theme
           pip install sphinx-book-theme
           pip install cloud_sptheme
-          pip install myst_parser
+          # pip install myst_parser
           pip install sphinx-bootstrap-theme
           pip install docutils>=0.21
           pip install matplotlib
