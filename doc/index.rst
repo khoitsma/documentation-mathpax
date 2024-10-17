@@ -13,4 +13,4 @@ Table of Contents
    readme_doc.rst
    mix_function.rst
    unmix_function.rst
-   MystTest
+   MystTest.ipynb
