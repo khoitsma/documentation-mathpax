@@ -20,6 +20,8 @@ def unmix_func(x):
 ```
 
 ```{code-cell} ipython3
+:tags: [hide-output, show-input]
+
 from myst_nb import glue
 a = "KLH my variable!"
 glue("my_variable", a)
@@ -30,6 +32,8 @@ glue("my_variable", a)
 ```
 
 ```{code-cell} ipython3
+:tags: [hide-output, show-input]
+
 from myst_nb import glue
 import matplotlib.pyplot as plt
 import numpy as np
