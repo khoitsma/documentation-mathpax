@@ -32,7 +32,7 @@ jobs:
           pip install jupyterlab_myst
           pip install jupytext
           pip install -U jupyter-book
-          sudo dpkg -i $DEB
+          pip install myst-nb
       - name: Sphinx build
         run: |
           sphinx-build doc _build
