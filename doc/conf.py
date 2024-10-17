@@ -27,7 +27,7 @@ source_suffix = {
     '.rst': 'restructuredtext',
     '.txt': 'restructuredtext',
     '.ipynb': 'myst-nb',
-    '.md': 'markdown'
+    '.md': 'myst-nb'
 }
 
 # -- General configuration ---------------------------------------------------
