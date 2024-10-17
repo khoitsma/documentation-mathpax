@@ -1,5 +1,7 @@
 import sphinx_bootstrap_theme
 import myst_nb
+import jupytext
+
 # import cloud_sptheme
 
 # Configuration file for the Sphinx documentation builder.
@@ -38,6 +40,8 @@ extensions = ['myst_nb']
 
 templates_path = ['_templates']
 exclude_patterns = []
+
+jupytext --set-kernel - notebook.md
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
