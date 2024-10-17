@@ -10,11 +10,6 @@ Table of Contents
    :maxdepth: 3
    :caption: Contents:
 
-   wealth.md
-   some-feature.md
-   another-feature.md
-   jup_KLH.md
-   include_note.md
    Untitled-1.ipynb
    readme_doc.rst
    mix_function.rst
