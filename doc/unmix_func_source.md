@@ -37,7 +37,9 @@ def unmix_func(x):
 from myst_nb import glue
 a = "KLH my variable!"
 glue("my_variable", a)
+```
 
+```
 {glue} `my_variable`
 ```
 
