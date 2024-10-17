@@ -1,7 +1,7 @@
 .. role:: raw-html(raw)
     :format: html
 
-Interval_Filter
+interval_filter
 ===============
 
 An example statistical function using Python and PyXLL_
