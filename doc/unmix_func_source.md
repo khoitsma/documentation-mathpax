@@ -39,6 +39,10 @@ a = "KLH my variable!"
 glue("my_variable", a)
 ```
 
+```
+{glue} my_variable
+```
+
 ```{code-cell} ipython3
 :tags: [hide-output, show-input]
 
@@ -51,4 +55,8 @@ y = np.sin(x)
 fig, ax = plt.subplots()
 ax.plot(x, y, 'b-', linewidth=2)
 glue("glued_fig", fig, display=False)
+```
+
+```
+{glue:figure} glued_fig
 ```
