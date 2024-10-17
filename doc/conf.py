@@ -18,10 +18,14 @@ author = 'K. Hoitsma'
 html_logo = 'https://khoitsmahq.firstcloudit.com/images/mp_small3.png'
 # html_theme = 'sphinx13'
 
+# source_suffix = {
+#     '.rst': 'restructuredtext',
+#     '.txt': 'restructuredtext',
+#     '.md': 'markdown',
+}
 source_suffix = {
     '.rst': 'restructuredtext',
-    '.txt': 'restructuredtext',
-    '.md': 'markdown',
+    '.txt': 'restructuredtext'
 }
 
 # -- General configuration ---------------------------------------------------
