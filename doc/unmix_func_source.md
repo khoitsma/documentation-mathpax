@@ -29,7 +29,7 @@ y = np.sin(x)
 fig, ax = plt.subplots()
 ax.plot(x, y, 'b-', linewidth=2)
 
-glue("glued_fig", fig, display=False)
+glue("glued_fig", fig, display=True)
 ```
 
 This is an inline glue example of a figure: {glue:}`glued_fig`.
