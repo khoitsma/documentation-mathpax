@@ -10,8 +10,7 @@ Table of Contents
    :maxdepth: 3
    :caption: Contents:
 
-   Untitled-1.ipynb
    readme_doc.rst
    mix_function.rst
    unmix_function.rst
-   src/MystTest
+   MystTest
