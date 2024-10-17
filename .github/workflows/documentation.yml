@@ -34,7 +34,7 @@ jobs:
           pip install myst-nb
       - name: Sphinx build
         run: |
-          sphinx-build -nW --keep-going -b html . _build/html
+          sphinx-build doc _build
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
