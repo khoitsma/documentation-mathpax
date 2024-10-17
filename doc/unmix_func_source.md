@@ -39,7 +39,9 @@ a = "KLH my variable!"
 glue("my_variable", a)
 ```
 
+```
 {glue} `my_variable`
+```
 
 ```{code-cell} ipython3
 :tags: [hide-output, show-input]
@@ -55,4 +57,6 @@ ax.plot(x, y, 'b-', linewidth=2)
 glue("glued_fig", fig, display=False)
 ```
 
+```
 This is an inline glue example of a figure: {glue:figure} `glued_fig`.
+```
