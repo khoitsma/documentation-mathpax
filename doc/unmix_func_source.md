@@ -111,10 +111,15 @@ Inline (1b) txt {glue:}`my_variable_b`, and fig {glue:}`glued_fig_r`.
 
 ```{code-cell} ipython3
 :tags: [hide-output, hide-input]
-import collections
 import itertools
 from collections import Counter
 from random import random
+from decimal import *
+
+def KLHfloatround(myfloat, my10power):
+    return float(
+        Decimal(round(myfloat, my10power)).quantize(Decimal(str(10**-my10power)))
+    )
 
 def filter_int_comp_list_X(bracket_number1, bracket_number2, interval_type, number_entry_list, sortQ=False, reverseQ=False, unique_onlyQ=False):
     """Given an Excel range, filter the numeric values, retaining only those that are within the interval
