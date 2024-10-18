@@ -56,6 +56,7 @@ y = np.sin(x)
 fig, ax = plt.subplots()
 ax.plot(x, y, 'b-', linewidth=2)
 mnb.glue("glued_fig", fig, display=False)
+a = ''
 ```
 
 ```{glue:figure} glued_fig
