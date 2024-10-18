@@ -40,7 +40,7 @@ glue("my_variable", a)
 ```
 
 ```
-{glue} my_variable
+{glue}`my_variable`
 ```
 
 ```{code-cell} ipython3
@@ -58,5 +58,5 @@ glue("glued_fig", fig, display=False)
 ```
 
 ```
-{glue:figure} glued_fig
+{glue:figure}`glued_fig`
 ```
