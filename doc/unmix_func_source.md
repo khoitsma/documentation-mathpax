@@ -59,10 +59,10 @@ mnb.glue("glued_fig", fig, display=False)
 a = ''
 ```
 
-```{mnb.glue:figure} glued_fig
+```{glue:figure} glued_fig
 ```
 
-```{mnb.glue:} my_variable
+```{glue:} my_variable
 ```
 
 ```md
