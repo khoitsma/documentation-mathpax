@@ -419,5 +419,5 @@ def stats_X(x, n, decimal_places=3):
     except:
         return 'Function error'
 
-temp = stats_X(10,5000,3)
+temp = stats_X(10,500,3)
 ```
