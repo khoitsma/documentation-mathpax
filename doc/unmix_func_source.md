@@ -58,7 +58,7 @@ y = np.sin(x)
 fig, ax = plt.subplots()
 ax.plot(x, y, 'b-', linewidth=2)
 
-fig.set_size_inches(0.6, 0.2)
+fig.set_size_inches(0.5, 0.166)
 fig.set_facecolor('white')
 fig.set_edgecolor('white')
 
@@ -66,12 +66,37 @@ ax.set_xticks([])
 ax.set_yticks([])
 ax.set_axis_off()
 
-mnb.glue("glued_fig", fig, display=False)
+mnb.glue("glued_fig_b", fig, display=False)
 
 temp = ''
 ```
 
-```{glue:figure} glued_fig
+```{code-cell} ipython3
+:tags: [hide-output, hide-input]
+from myst_nb import glue
+import myst_nb as mnb
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.linspace(0, 10, 200)
+y = np.cos(x)
+fig, ax = plt.subplots()
+ax.plot(x, y, 'r-', linewidth=2)
+
+fig.set_size_inches(0.5, 0.166)
+fig.set_facecolor('white')
+fig.set_edgecolor('white')
+
+ax.set_xticks([])
+ax.set_yticks([])
+ax.set_axis_off()
+
+mnb.glue("glued_fig_r", fig, display=False)
+
+temp = ''
+```
+
+```{glue:figure} glued_fig_b
 ```
 
 ```{glue:} my_variable_a
@@ -80,6 +105,6 @@ temp = ''
 ```{glue:} my_variable_b
 ```
 
-Inline (1a) txt {glue:}`my_variable_a`, and fig {glue:}`glued_fig`.
+Inline (1a) txt {glue:}`my_variable_a`, and fig {glue:}`glued_fig_b`.
 
-Inline (1b) txt {glue:}`my_variable_b`, and fig {glue:}`glued_fig`.
+Inline (1b) txt {glue:}`my_variable_b`, and fig {glue:}`glued_fig_r`.
