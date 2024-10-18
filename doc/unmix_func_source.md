@@ -116,7 +116,7 @@ import itertools
 from collections import Counter
 from random import random
 
-def filter_int_comp_list(bracket_number1, bracket_number2, interval_type, number_entry_list, sortQ=False, reverseQ=False, unique_onlyQ=False):
+def filter_int_comp_list_X(bracket_number1, bracket_number2, interval_type, number_entry_list, sortQ=False, reverseQ=False, unique_onlyQ=False):
     """Given an Excel range, filter the numeric values, retaining only those that are within the interval
 
     Args:
@@ -137,22 +137,27 @@ def filter_int_comp_list(bracket_number1, bracket_number2, interval_type, number
     """
 
     ret = []
+    icx=interval_compare_X(bracket_number1, bracket_number2, interval_type)
     # rg_flattened = itertools.chain.from_iterable(number_entry_range)
-    for e in number_entry_list:
-        e_value = None
-        if e == '' or e is None:
-            # no conversion
-            e_value = ''
-        else:
-            try:
-                e_value = e.Value
-            except:
-                e_value = e
-        if type(e_value) == float:
-            comparison = int_comp(bracket_number1, bracket_number2, interval_type, e_value)
-            if comparison:
-                ret.append(e_value)
-    
+    # for e in number_entry_list:
+    #     e_value = None
+    #     if e == '' or e is None:
+    #         # no conversion
+    #         e_value = ''
+    #     else:
+    #         try:
+    #             e_value = e.Value
+    #         except:
+    #             e_value = e
+    #     if type(e_value) == float:
+    #         comparison = icx(e_value)
+    #         if comparison:
+    #             ret.append(e_value)
+
+    # ret = [icx(x) for x in number_entry_list]       
+
+    ret = [y for x in number_entry_list for y in [icx(x)] if y is not None]
+
     if unique_onlyQ:
         ret = list(set(ret))
     if sortQ:
