@@ -37,7 +37,7 @@ def unmix_func(x):
 # from myst_nb import glue
 import myst_nb as mnb
 
-a = "KLH my variable!"
+a = "KLH"
 mnb.glue("my_variable", a, display=False)
 ```
 
