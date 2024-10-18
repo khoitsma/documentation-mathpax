@@ -114,8 +114,7 @@ Inline (1b) txt {glue:}`my_variable_b`, and fig {glue:}`glued_fig_r`.
 from collections import Counter
 
 from random import random
-# @xl_func("int x: object<skip_primitives=True>")
-@xl_func("int x: object")
+
 def mix_func(x):
     """Return a list of x random values
 
@@ -144,7 +143,7 @@ def mix_func(x):
         return "Function error"
 
 def stats_X(x, n, decimal_places=3):
-    """Return a list of lists couting and comparing number of runs with each possible length
+    """Return a list of lists counting and comparing number of runs with each possible length
 
     :param x: integer number of values per run
     :param n: integer number of runs
@@ -163,17 +162,17 @@ def stats_X(x, n, decimal_places=3):
 
         = stats_X(10,50000,3) returns
 
-        0:	47	  0.001
-        1:	489	  0.010
-        2:	2224	0.044
-        3:	5882	0.118
-        4:	10232	0.205
-        5:	12299	0.246
-        6:	10183	0.204
-        7:	5933	0.119
-        8:	2135	0.043
-        9:	533	  0.011
-        10:	43	  0.001
+        0:	47     0.001
+        1:	489    0.010
+        2:	2224   0.044
+        3:	5882   0.118
+        4:	10232	 0.205
+        5:	12299  0.246
+        6:	10183  0.204
+        7:	5933   0.119
+        8:	2135   0.043
+        9:	533    0.011
+        10:	43     0.001
 
     """
 
