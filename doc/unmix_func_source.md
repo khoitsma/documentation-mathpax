@@ -111,10 +111,60 @@ Inline (1b) txt {glue:}`my_variable_b`, and fig {glue:}`glued_fig_r`.
 
 ```{code-cell} ipython3
 :tags: [hide-output, hide-input]
+import collections
+import itertools
 from collections import Counter
-
 from random import random
 
+def filter_int_comp_list(bracket_number1, bracket_number2, interval_type, number_entry_list, sortQ=False, reverseQ=False, unique_onlyQ=False):
+    """Given an Excel range, filter the numeric values, retaining only those that are within the interval
+
+    Args:
+        bracket_number1: one extreme value in the interval
+        bracket_number2: the other extreme value in the interval
+        interval_type: type of interval closure (closed/open and combinations)
+        number_entry_list: a LIST of values to be filtered
+        sortQ: a boolean, True indicates sorted ascending
+        reverseQ: a boolean, True indicates sorted descending
+        unique_onlyQ: a boolean, indicates removal of duplicates
+
+    Returns:
+        List of values meeting the comparison specification, if any. Otherwise, the string 'empty'
+        
+    Raises:
+        string 'Error in multiple range input': If the function fails.
+
+    """
+
+    ret = []
+    # rg_flattened = itertools.chain.from_iterable(number_entry_range)
+    for e in number_entry_list:
+        e_value = None
+        if e == '' or e is None:
+            # no conversion
+            e_value = ''
+        else:
+            try:
+                e_value = e.Value
+            except:
+                e_value = e
+        if type(e_value) == float:
+            comparison = int_comp(bracket_number1, bracket_number2, interval_type, e_value)
+            if comparison:
+                ret.append(e_value)
+    
+    if unique_onlyQ:
+        ret = list(set(ret))
+    if sortQ:
+        ret.sort()
+    if reverseQ:
+        ret.reverse()
+
+    if len(ret) == 0:
+        return 0
+    else:
+        return ret
+    
 def mix_func(x):
     """Return a list of x random values
 
