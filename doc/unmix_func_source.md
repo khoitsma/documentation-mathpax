@@ -65,4 +65,6 @@ a = ''
 ```{glue:} my_variable
 ```
 
-Inline text: {glue:}`my_variable`, and figure: {glue:}`glued_fig`.
+```md
+Inline text; {glue:}`my_variable`, and figure: {glue:}`glued_fig`.
+```
