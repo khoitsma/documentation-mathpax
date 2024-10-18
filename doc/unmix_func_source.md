@@ -425,5 +425,5 @@ def stats_X(x, n, decimal_places=3):
 
 temp = stats_X(10,500,3)
 
-qout = temp[5][1]
+temp[5][1]
 ```
