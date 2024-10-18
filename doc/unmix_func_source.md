@@ -41,8 +41,7 @@ a = "KLH my variable!"
 mnb.glue("my_variable", a, display=False)
 ```
 
-```
-{glue:} my_variable
+```{glue:} my_variable
 ```
 
 ```{code-cell} ipython3
@@ -60,7 +59,5 @@ ax.plot(x, y, 'b-', linewidth=2)
 mnb.glue("glued_fig", fig, display=False)
 ```
 
-```
-{glue:figure}`glued_fig`
-{glue:figure} glued_fig
+```{glue:figure} glued_fig
 ```
