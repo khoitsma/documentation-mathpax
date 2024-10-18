@@ -36,7 +36,6 @@ def unmix_func(x):
 
 # from myst_nb import glue
 import myst_nb as mnb
-:tags:[hide-output]
 
 a = "KLH my variable!"
 mnb.glue("my_variable", a)
