@@ -66,9 +66,9 @@ ax.set_xticks([])
 ax.set_yticks([])
 ax.set_axis_off()
 
-# mnb.glue("glued_fig", fig, display=False)
+mnb.glue("glued_fig", fig, display=False)
 
-# temp = ''
+temp = ''
 ```
 
 ```{glue:figure} glued_fig
