@@ -424,4 +424,6 @@ def stats_X(x, n, decimal_places=3):
 # temp3 = KLHfloatround(myfloat, my10power)
 
 temp = stats_X(10,500,3)
+
+qout = temp[5,1]
 ```
