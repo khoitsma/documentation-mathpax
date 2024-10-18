@@ -202,10 +202,7 @@ def interval_compare_X(bracket_number1, bracket_number2, interval_type):
             else:
                 return None
         return OO
-```
 
-
-```python
 def interval_compare_X(bracket_number1, bracket_number2, interval_type):
     """Given an Excel cell, filter the numeric value, retaining only if within the interval
 
