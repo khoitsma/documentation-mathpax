@@ -48,7 +48,7 @@ mnb.glue("my_variable_b", b, display=False)
 
 ```{code-cell} ipython3
 :tags: [hide-output, hide-input]
-# from myst_nb import glue
+from myst_nb import glue
 import myst_nb as mnb
 import matplotlib.pyplot as plt
 import numpy as np
@@ -58,17 +58,17 @@ y = np.sin(x)
 fig, ax = plt.subplots()
 ax.plot(x, y, 'b-', linewidth=2)
 
-fig.set_size_inches(0.3, 0.1)
+fig.set_size_inches(0.6, 0.2)
 fig.set_facecolor('white')
 fig.set_edgecolor('white')
-axes = fig.add_axes([0.00,0.00,1.0,1.0], axisbg='w', frame_on=False)
-axes.set_xticks([])
-axes.set_yticks([])
-axes.set_axis_off()
 
-mnb.glue("glued_fig", fig, display=False)
+ax.set_xticks([])
+ax.set_yticks([])
+ax.set_axis_off()
 
-temp = ''
+# mnb.glue("glued_fig", fig, display=False)
+
+# temp = ''
 ```
 
 ```{glue:figure} glued_fig
