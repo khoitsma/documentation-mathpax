@@ -419,7 +419,9 @@ def stats_X(x, n, decimal_places=3):
     except:
         return 'Function error'
 
-# temp = stats_X(10,500,3)
+# temp2 = mix_func(10)
 
-temp2 = mix_func(10)
+# temp3 = KLHfloatround(myfloat, my10power)
+
+temp = stats_X(10,500,3)
 ```
