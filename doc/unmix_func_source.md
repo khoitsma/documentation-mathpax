@@ -34,9 +34,10 @@ def unmix_func(x):
 ```{code-cell} ipython3
 :tags: [hide-output, show-input]
 
-from myst_nb import glue
+# from myst_nb import glue
+import myst_nb as mnb
 a = "KLH my variable!"
-glue("my_variable", a)
+mnb.glue("my_variable", a)
 ```
 
 ```
@@ -46,7 +47,8 @@ glue("my_variable", a)
 ```{code-cell} ipython3
 :tags: [hide-output, show-input]
 
-from myst_nb import glue
+# from myst_nb import glue
+import myst_nb as mnb
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -54,8 +56,8 @@ x = np.linspace(0, 10, 200)
 y = np.sin(x)
 fig, ax = plt.subplots()
 ax.plot(x, y, 'b-', linewidth=2)
-fig.show()
-glue("glued_fig", fig, display=True)
+# fig.show()
+mnb.glue("glued_fig", fig, display=True)
 ```
 
 ```
