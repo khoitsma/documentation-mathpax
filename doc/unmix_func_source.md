@@ -115,12 +115,178 @@ import itertools
 from collections import Counter
 from random import random
 from decimal import *
+from numbers import Number
 
 def KLHfloatround(myfloat, my10power):
     return float(
         Decimal(round(myfloat, my10power)).quantize(Decimal(str(10**-my10power)))
     )
 
+def interval_compare_X(bracket_number1, bracket_number2, interval_type):
+    """Given an Excel cell, filter the numeric value, retaining only if within the interval
+
+    Args:
+        bracket_number1: one extreme value in the interval (*)
+        bracket_number2: the other extreme value in the interval (*)
+        interval_type: type of interval closure (closed/open and combinations)
+        number_entry: a single Excel cell to be filtered
+        sortQ: a boolean, True indicates an ascending sort
+        reverseQ: a boolean, True indicates sorted descending
+        unique_onlyQ: a boolean, indicates removal of duplicates
+        (*) or in ["minf", "pinf", "-inf", "inf"]
+
+    Returns:
+        List of values meeting the comparison specification, if any. Otherwise, the string 'empty'
+        
+    Raises:
+        ValueError("Expected 2 numeric values and string interval_type")
+
+    """
+    b1, b2 = min(bracket_number1, bracket_number2), max(bracket_number1, bracket_number2)
+
+    b1_ok, b2_ok = False, False
+    
+    if isinstance(b1, str):
+        b1 = bracket_inf(b1)
+        if not b1:
+            input_check = False
+            # print("ValueError('bracket1 must be numeric")
+            raise ValueError('bracket1 must be numeric or in ["minf", "pinf", "-inf", "inf"]')
+        else:
+            b1_ok =True
+
+    if isinstance(b2, str):
+        b2 = bracket_inf(b2)
+        if not b2:
+            # print("ValueError('bracket2 must be numeric")
+            raise ValueError('bracket2 must be numeric or in ["minf", "pinf", "-inf", "inf"]')
+        else:
+            b2_ok =True
+    
+    if not ((isinstance(b1, Number) or b1_ok) 
+            and (isinstance(b2, Number) or b2_ok) 
+            and isinstance(interval_type, str)):
+        # print("ValueError('Expected ...")
+        raise ValueError("Expected 2 numeric values (*) and string interval_type")
+
+    ivupper = interval_type.upper()
+
+    if not(ivupper in ['[]','[)','(]','()','CC','CO','OC','OO']):
+        raise ValueError("Interval_type must be \n['[]','[)','(]','()','CC','CO','OC','OO']")
+                                   
+    if ivupper in ['[]','CC']:
+        def CC(x):
+            if (b1 < x < b2):
+                return x
+            else:
+                return None
+        return CC
+    elif ivupper in ['[)','CO']:
+        def CO(x):
+            if (b1 < x <= b2):
+                return x
+            else:
+                return None
+        return CO
+    elif ivupper in ['(]','OC']:
+        def OC(x):
+            if (b1 <= x < b2):
+                return x
+            else:
+                return None
+        return OC
+    elif ivupper in ['()','OO']:
+        def OO(x):
+            if (b1 <= x <= b2):
+                return x
+            else:
+                return None
+        return OO
+```
+
+
+```python
+def interval_compare_X(bracket_number1, bracket_number2, interval_type):
+    """Given an Excel cell, filter the numeric value, retaining only if within the interval
+
+    Args:
+        bracket_number1: one extreme value in the interval (*)
+        bracket_number2: the other extreme value in the interval (*)
+        interval_type: type of interval closure (closed/open and combinations)
+        number_entry: a single Excel cell to be filtered
+        sortQ: a boolean, True indicates an ascending sort
+        reverseQ: a boolean, True indicates sorted descending
+        unique_onlyQ: a boolean, indicates removal of duplicates
+        (*) or in ["minf", "pinf", "-inf", "inf"]
+
+    Returns:
+        List of values meeting the comparison specification, if any. Otherwise, the string 'empty'
+        
+    Raises:
+        ValueError("Expected 2 numeric values and string interval_type")
+
+    """
+    b1, b2 = min(bracket_number1, bracket_number2), max(bracket_number1, bracket_number2)
+
+    b1_ok, b2_ok = False, False
+    
+    if isinstance(b1, str):
+        b1 = bracket_inf(b1)
+        if not b1:
+            input_check = False
+            # print("ValueError('bracket1 must be numeric")
+            raise ValueError('bracket1 must be numeric or in ["minf", "pinf", "-inf", "inf"]')
+        else:
+            b1_ok =True
+
+    if isinstance(b2, str):
+        b2 = bracket_inf(b2)
+        if not b2:
+            # print("ValueError('bracket2 must be numeric")
+            raise ValueError('bracket2 must be numeric or in ["minf", "pinf", "-inf", "inf"]')
+        else:
+            b2_ok =True
+    
+    if not ((isinstance(b1, Number) or b1_ok) 
+            and (isinstance(b2, Number) or b2_ok) 
+            and isinstance(interval_type, str)):
+        # print("ValueError('Expected ...")
+        raise ValueError("Expected 2 numeric values (*) and string interval_type")
+
+    ivupper = interval_type.upper()
+
+    if not(ivupper in ['[]','[)','(]','()','CC','CO','OC','OO']):
+        raise ValueError("Interval_type must be \n['[]','[)','(]','()','CC','CO','OC','OO']")
+                                   
+    if ivupper in ['[]','CC']:
+        def CC(x):
+            if (b1 < x < b2):
+                return x
+            else:
+                return None
+        return CC
+    elif ivupper in ['[)','CO']:
+        def CO(x):
+            if (b1 < x <= b2):
+                return x
+            else:
+                return None
+        return CO
+    elif ivupper in ['(]','OC']:
+        def OC(x):
+            if (b1 <= x < b2):
+                return x
+            else:
+                return None
+        return OC
+    elif ivupper in ['()','OO']:
+        def OO(x):
+            if (b1 <= x <= b2):
+                return x
+            else:
+                return None
+        return OO
+    
 def filter_int_comp_list_X(bracket_number1, bracket_number2, interval_type, number_entry_list, sortQ=False, reverseQ=False, unique_onlyQ=False):
     """Given an Excel range, filter the numeric values, retaining only those that are within the interval
 
@@ -233,7 +399,6 @@ def stats_X(x, n, decimal_places=3):
         8:	2135   0.043
         9:	533    0.011
         10:	43     0.001
-
     """
 
     try:
