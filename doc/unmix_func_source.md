@@ -62,5 +62,5 @@ a = ''
 ```{glue:figure} glued_fig
 ```
 
-```'The answer is '{glue:} my_variable
+```{glue:} my_variable
 ```
