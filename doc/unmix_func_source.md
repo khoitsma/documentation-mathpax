@@ -47,7 +47,7 @@ mnb.glue("my_variable_b", b, display=False)
 ```
 
 ```{code-cell} ipython3
-:tags: [hide-output, hide-input]
+:tags: [hide-input]
 from myst_nb import glue
 import myst_nb as mnb
 import matplotlib.pyplot as plt
