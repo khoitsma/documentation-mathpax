@@ -38,7 +38,9 @@ def unmix_func(x):
 import myst_nb as mnb
 
 a = "KLH"
-mnb.glue("my_variable", a, display=False)
+mnb.glue("my_variable_a", a, display=False)
+b = 3.1416
+mnb.glue("my_variable_b", b, display=False)
 ```
 
 ```{glue:} my_variable
@@ -56,19 +58,18 @@ y = np.sin(x)
 fig, ax = plt.subplots()
 ax.plot(x, y, 'b-', linewidth=2)
 mnb.glue("glued_fig", fig, display=False)
-a = ''
+temp = ''
 ```
 
 ```{glue:figure} glued_fig
 ```
 
-```{glue:} my_variable
+```{glue:} my_variable_a
 ```
 
-Inline (1) txt {glue:}`my_variable`, and fig {glue:}`glued_fig`.
-
-``` Inline (2) txt {glue:}`my_variable`, and fig {glue:}`glued_fig`.
+```{glue:} my_variable_b
 ```
 
-``` Inline (3) txt {glue:} my_variable, and fig {glue:} glued_fig .
-```
+Inline (1a) txt {glue:}`my_variable_a`, and fig {glue:}`glued_fig`.
+
+Inline (1b) txt {glue:}`my_variable_b`, and fig {glue:}`glued_fig`.
