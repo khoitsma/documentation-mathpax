@@ -462,7 +462,7 @@ name: my-figure
 
 
 % These are some links used above to keep things clean!
-[myst-KLH]: [https://mystmd.org/guide/frontmatter](https://www.mathpax.com/ohtanis-batting-average-sep-2024/)
+[myst-KLH]: https://www.mathpax.com/ohtanis-batting-average-sep-2024/
 
 
 ```{math}
