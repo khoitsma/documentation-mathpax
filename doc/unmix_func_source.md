@@ -443,3 +443,9 @@ mnb.glue("exact_5H_in_10", t51, display=False)
 {glue:}`table_of_results`
 
 In the 50,000 experiments of 10 coin tosses each, exactly 5 heads occurred **{glue:}`exact_5H_in_10`** times.
+
+% Embed both the input and output
+```{embed} #mycelllabel
+:remove-output: false
+:remove-input: false
+```
