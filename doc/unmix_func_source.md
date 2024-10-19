@@ -77,6 +77,7 @@ from myst_nb import glue
 import myst_nb as mnb
 import matplotlib.pyplot as plt
 import numpy as np
+import pandas as pd
 
 x = np.linspace(0, 10, 200)
 y = np.cos(x)
@@ -422,10 +423,17 @@ def stats_X(x, n, decimal_places=3):
 
 temp = stats_X(10,50000,3)
 
-t51 = temp[5][1]
+# create a dataframe
+df = pd.DataFrame(temp, columns = ['Item', 'Count', 'Fraction'])
+mnb.glue("table_of_results", df, display=False)
 
+t51 = temp[5][1]
 mnb.glue("exact_5H_in_10", t51, display=False)
 ```
 
-In the model, out of 50,000 experiments of 10 coin tosses each, exactly 5 heads occurred  
-{glue:}`exact_5H_in_10` times.
+### Model Results
+
+{glue:}`table_of_results`
+
+In the 50,000 experiments of 10 coin tosses each, exactly 5 heads occurred  
+**{glue:}`exact_5H_in_10`** times.
