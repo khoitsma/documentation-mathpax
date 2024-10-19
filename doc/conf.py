@@ -44,7 +44,7 @@ exclude_patterns = []
 nb_execution_mode = "force"
 nb_execution_timeout = 600
 execution_show_tb = True
-myst_heading_anchors = 3
+myst_heading_anchors = 7
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
