@@ -460,7 +460,8 @@ name: my-figure
 :remove-input: false
 ```
 
-```md
+```{math}
+:label: maxwell
 \begin{gather*}
 a_1=b_1+c_1\\
 a_2=b_2+c_2-d_2+e_2
