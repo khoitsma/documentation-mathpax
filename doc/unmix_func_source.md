@@ -453,6 +453,9 @@ name: my-figure
 
 - A cross-pasted `any` role: {glue}`../doc/simple_notebook.ipynb::my_variableq`
 
+X {glue}`../doc/MYST_NB_TEST_BED.ipynb::MYST_TEST_BED`
+
+
 ```{glue:figure} MYST_TEST_BED
 :doc: ../doc/MYST_NB_TEST_BED.ipynb
 :remove-output: false
