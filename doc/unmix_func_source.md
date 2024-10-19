@@ -460,7 +460,6 @@ name: my-figure
 :remove-input: false
 ```
 
-
 % These are some links used above to keep things clean!
 [myst-KLH]: https://www.mathpax.com/ohtanis-batting-average-sep-2024/
 
