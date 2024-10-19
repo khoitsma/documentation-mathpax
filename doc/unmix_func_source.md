@@ -451,11 +451,9 @@ name: my-figure
 ---
 ```
 
-```[]MystTest.ipynb#mycelllabel - This is a cross-reference to a notebook cell
-```
-
 % Embed both the input and output
-```{embed} (doc:#mycelllabel)
+```{embed} my_variableq
+:doc: simple_notebook.ipynb
 :remove-output: false
 :remove-input: false
 ```
