@@ -444,6 +444,13 @@ mnb.glue("exact_5H_in_10", t51, display=False)
 
 In the 50,000 experiments of 10 coin tosses each, exactly 5 heads occurred **{glue:}`exact_5H_in_10`** times.
 
+```{figure} https://khoitsmahq.firstcloudit.com/images/tabby_excerpt.png
+---
+height: 150px
+name: my-figure
+---
+```
+
 [](#mycelllabel) - This is a cross-reference to a notebook cell
 
 % Embed both the input and output
