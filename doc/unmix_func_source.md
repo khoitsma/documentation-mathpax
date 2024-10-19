@@ -460,13 +460,20 @@ name: my-figure
 :remove-input: false
 ```
 
+
+% These are some links used above to keep things clean!
+[myst-KLH]: [https://mystmd.org/guide/frontmatter](https://www.mathpax.com/ohtanis-batting-average-sep-2024/)
+
+
 ```{math}
 :label: maxwell
 \begin{gather*}
 a_1=b_1+c_1\\
 a_2=b_2+c_2-d_2+e_2
 \end{gather*}
+```
 
+```{math}
 \begin{align}
 a_{11}& =b_{11}&
   a_{12}& =b_{12}\\
