@@ -461,7 +461,7 @@ X {glue}`../doc/MYST_NB_TEST_BED.ipynb::MYST_TEST_BED`
 :remove-output: false
 :remove-input: false
 :figwidth: 300px
-:name: "tbl:MTB"
+:name: "MYST_TEST_BED"
 
 A caption for a pandas table.
 ```
