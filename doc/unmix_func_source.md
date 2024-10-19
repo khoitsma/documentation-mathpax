@@ -452,7 +452,7 @@ name: my-figure
 ```
 
 - A cross-pasted `any` role: {glue}`../doc/simple_notebook.ipynb::my_variableq`
-- A cross-pasted `any` role: {glue}`../doc/simple_notebook.ipynb::my_variableq`
+- A cross-pasted `any` role: {glue}`../doc/MYST_NB_TEST_BED.ipynb::MYST_TEST_BED`
 
 A cross-pasted `any` directive:
 
