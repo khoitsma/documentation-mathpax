@@ -59,7 +59,7 @@ templates_path = ['_templates']
 exclude_patterns = []
 
 nb_execution_mode = "force"
-nb_execution_timeout = 600
+nb_execution_timeout = 60
 execution_show_tb = True
 myst_heading_anchors = 7
 
