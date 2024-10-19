@@ -455,7 +455,7 @@ name: my-figure
 ```
 
 % Embed both the input and output
-```{embed} ./doc/MystTest.ipynb#mycelllabel
+```{embed} https://github.com/khoitsma/documentation-mathpax/doc/MystTest.ipynb#mycelllabel
 :remove-output: false
 :remove-input: false
 ```
