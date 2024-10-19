@@ -421,12 +421,22 @@ def stats_X(x, n, decimal_places=3):
     except:
         return 'Function error'
 
+# list of lists
 temp = stats_X(10,50000,3)
 
 # create a dataframe
 df = pd.DataFrame(temp, columns = ['Item', 'Count', 'Fraction'])
-mnb.glue("table_of_results", df, display=False)
 
+# Using the style attribute to right-justify numbers
+df.style.set_table_styles([
+    {'selector': 'td', 'props': [('text-align', 'right')]}
+])
+
+# Inserting variables into pages using glue: entire table
+mnb.glue("table_of_results", df.to_string(index=False), display=False)
+
+# Inserting variables into pages using glue:
+# now just one item from the list of lists
 t51 = temp[5][1]
 mnb.glue("exact_5H_in_10", t51, display=False)
 ```
