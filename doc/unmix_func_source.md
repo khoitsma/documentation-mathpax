@@ -425,15 +425,12 @@ def stats_X(x, n, decimal_places=3):
 temp = stats_X(10,50000,3)
 
 # create a dataframe
-df = pd.DataFrame(temp, columns = ['Item', 'Count', 'Fraction'])
-
-# Using the style attribute to right-justify numbers
-df.style.set_table_styles([
-    {'selector': 'td', 'props': [('text-align', 'right')]}
-])
+# using list comprehension to get last two columns of all rows
+result = [row[-2:] for row in temp]
+df = pd.DataFrame(temp, columns = ['Count', 'Fraction'])
 
 # Inserting variables into pages using glue: entire table
-mnb.glue("table_of_results", df.to_string(index=False), display=False)
+mnb.glue("table_of_results", df, display=False)
 
 # Inserting variables into pages using glue:
 # now just one item from the list of lists
@@ -441,9 +438,8 @@ t51 = temp[5][1]
 mnb.glue("exact_5H_in_10", t51, display=False)
 ```
 
-### Model Results
+#### Model Results
 
 {glue:}`table_of_results`
 
-In the 50,000 experiments of 10 coin tosses each, exactly 5 heads occurred  
-**{glue:}`exact_5H_in_10`** times.
+In the 50,000 experiments of 10 coin tosses each, exactly 5 heads occurred **{glue:}`exact_5H_in_10`** times.
