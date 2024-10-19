@@ -463,7 +463,7 @@ A cross-pasted `any` directive:
 ```
 
 ```{glue} MYST_TEST_BED
-:doc: MYST_NB_TEST_BED.ipynb
+:doc: ../doc/MYST_NB_TEST_BED.ipynb
 ```
 
 % Embed both the input and output
