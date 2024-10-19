@@ -426,8 +426,8 @@ temp = stats_X(10,50000,3)
 
 # create a dataframe
 # using list comprehension to get last two columns of all rows
-result = [row[-2:] for row in temp]
-df = pd.DataFrame(temp, columns = ['Count', 'Fraction'])
+temp_trimmed = [row[-2:] for row in temp]
+df = pd.DataFrame(temp_trimmed, columns = ['Count', 'Fraction'])
 
 # Inserting variables into pages using glue: entire table
 mnb.glue("table_of_results", df, display=False)
