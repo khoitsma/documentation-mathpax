@@ -451,19 +451,12 @@ name: my-figure
 ---
 ```
 
-
-{glue:table}`../doc/MYST_NB_TEST_BED.ipynb::MYST_TEST_BED`
-
 - A cross-pasted `any` role: {glue}`../doc/simple_notebook.ipynb::my_variableq`
-
-A cross-pasted `any` directive:
-
-```{glue} var_text
-:doc: orphaned_nb.ipynb
-```
 
 ```{glue:figure} MYST_TEST_BED
 :doc: ../doc/MYST_NB_TEST_BED.ipynb
+:remove-output: false
+:remove-input: false
 :figwidth: 300px
 :name: "tbl:MTB"
 
