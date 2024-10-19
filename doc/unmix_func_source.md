@@ -460,6 +460,9 @@ A cross-pasted `any` directive:
 :doc: orphaned_nb.ipynb
 ```
 
+```{glue} MYST_TEST_BED
+:doc: MYST_NB_TEST_BED.ipynb
+```
 
 % Embed both the input and output
 ```{embed} my_variableq
