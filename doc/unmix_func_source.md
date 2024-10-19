@@ -451,6 +451,16 @@ name: my-figure
 ---
 ```
 
+- A cross-pasted `any` role: {glue}`simple_notebook.ipynb::my_variableq`
+- A cross-pasted `text` role: {glue:text}`orphaned_nb.ipynb::var_float:.2E`
+
+A cross-pasted `any` directive:
+
+```{glue} var_text
+:doc: orphaned_nb.ipynb
+```
+
+
 % Embed both the input and output
 ```{embed} my_variableq
 :doc: simple_notebook.ipynb
