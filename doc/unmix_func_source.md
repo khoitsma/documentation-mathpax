@@ -452,6 +452,7 @@ name: my-figure
 ```
 
 - A cross-pasted `any` role: {glue}`../doc/simple_notebook.ipynb::my_variableq`
+- A cross-pasted `any` role: {glue}`../doc/simple_notebook.ipynb::my_variableq`
 
 A cross-pasted `any` directive:
 
@@ -467,7 +468,7 @@ A cross-pasted `any` directive:
 :remove-input: false
 ```
 
-% These are some links used above to keep things clean!
+% These are some links used above to keep things clean ...
 [myst-KLH]: https://www.mathpax.com/ohtanis-batting-average-sep-2024/
 
 
