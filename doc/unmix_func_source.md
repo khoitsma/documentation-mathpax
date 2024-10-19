@@ -116,6 +116,7 @@ from collections import Counter
 from random import random
 from decimal import *
 from numbers import Number
+import myst_nb as mnb
 
 def KLHfloatround(myfloat, my10power):
     return float(
@@ -419,11 +420,12 @@ def stats_X(x, n, decimal_places=3):
     except:
         return 'Function error'
 
-# temp2 = mix_func(10)
-
-# temp3 = KLHfloatround(myfloat, my10power)
-
 temp = stats_X(10,50000,3)
 
-temp[5][1]
+t51 = temp[5][1]
+
+mnb.glue("exact_5H_in_10", t51, display=False)
 ```
+
+In the model, out of 50,000 experiments of 10 coin tosses each, exactly 5 heads occurred  
+{glue:}`exact_5H_in_10` times.
