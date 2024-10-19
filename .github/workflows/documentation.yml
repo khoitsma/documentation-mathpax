@@ -32,6 +32,7 @@ jobs:
           pip install jupytext
           pip install -U jupyter-book
           pip install myst-nb
+          pip install pandas
       - name: Sphinx build
         run: |
           sphinx-build doc _build
