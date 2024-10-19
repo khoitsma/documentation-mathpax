@@ -452,7 +452,7 @@ name: my-figure
 ```
 
 
-{glue:}`../doc/MYST_NB_TEST_BED.ipynb::MYST_TEST_BED`
+{glue:table}`../doc/MYST_NB_TEST_BED.ipynb::MYST_TEST_BED`
 
 - A cross-pasted `any` role: {glue}`../doc/simple_notebook.ipynb::my_variableq`
 
@@ -462,8 +462,12 @@ A cross-pasted `any` directive:
 :doc: orphaned_nb.ipynb
 ```
 
-```{glue} MYST_TEST_BED
+```{glue:figure} MYST_TEST_BED
 :doc: ../doc/MYST_NB_TEST_BED.ipynb
+:figwidth: 300px
+:name: "tbl:MTB"
+
+A caption for a pandas table.
 ```
 
 % Embed both the input and output
