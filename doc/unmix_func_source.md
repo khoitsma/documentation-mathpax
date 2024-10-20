@@ -526,7 +526,8 @@ import plotly.offline as py
 df = px.data.iris()
 fig = px.scatter(df, x="sepal_width", y="sepal_length", color="species", size="sepal_length")
 
-mnb.glue("plotly_fig", fig, display=False)
+
+mnb.glue("plotly_fig", show(fig), display=False)
 ```
 
 ```{glue:figure} plotly_fig
@@ -547,6 +548,13 @@ from bokeh.plotting import figure, show
 from bokeh.sampledata.penguins import data
 from bokeh.transform import factor_cmap, factor_mark
 
+import bokeh.io
+# this is here only for completeness to clarify where
+# the methods are nested (you probably already imported this earlier)
+
+bokeh.io.reset_output()
+bokeh.io.output_notebook()
+
 SPECIES = sorted(data.species.unique())
 MARKERS = ['hex', 'circle_x', 'triangle']
 
@@ -563,7 +571,9 @@ p.legend.location = "top_left"
 p.legend.title = "Species"
 
 # show(p)
-mnb.glue("bokeh_p", p, display=False)
+ap = show(p)
+
+mnb.glue("bokeh_p", ap, display=False)
 ```
 
 ```{glue:figure} bokeh_p
