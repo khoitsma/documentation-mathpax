@@ -22,7 +22,3 @@ Here's some markdown text.
 
 ```{code-cell} ipython3
 print("Hello from a code cell!")
-
-```{code-cell} ipython3
-print("Hello from a code cell!")
-
