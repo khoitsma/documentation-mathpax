@@ -11,7 +11,7 @@ kernelspec:
 ---
 
 ```python
-from random import random
+from random import random 
 @xl_func("object x: var")
 def unmix_func(x):
     """Return a list of lists
