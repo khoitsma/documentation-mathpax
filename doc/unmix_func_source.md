@@ -530,7 +530,6 @@ mnb.glue("plotly_fig", fig, display=False)
 ```
 
 ```{glue:figure} plotly_fig
-:figwidth: 300px
 :name: "plotly_fig"
 ```
 
@@ -568,7 +567,6 @@ mnb.glue("bokeh_p", p, display=False)
 ```
 
 ```{glue:figure} bokeh_p
-:figwidth: 300px
 :name: "bokeh_p"
 ```
 
