@@ -471,15 +471,20 @@ A caption for a pandas table.
 A caption for a pandas table.
 ```
 
+----
+
 % Embed both the input and output
 ```{embed} ../doc/simple_notebook.ipynb::my_variableq
 :remove-output: false
 :remove-input: false
 ```
 
+----
+
 % These are some links used above to keep things clean ...
 [myst-KLH]: https://www.mathpax.com/ohtanis-batting-average-sep-2024/
 
+----
 
 ```{math}
 :label: maxwell
@@ -498,6 +503,8 @@ a_{21}& =b_{21}&
   a_{22}& =b_{22}+c_{22}
 \end{align}
 ```
+
+----
 
 | name                            |       insert                | item  |
 |:--------------------------------|----------------------------:|:-----:|
@@ -522,9 +529,9 @@ fig = px.scatter(df, x="sepal_width", y="sepal_length", color="species", size="s
 mnb.glue("plotly_fig", fig, display=False)
 ```
 
-```{glue:figure} bokeh_p
+```{glue:figure} plotly_fig
 :figwidth: 300px
-:name: "bokeh_p"
+:name: "plotly_fig"
 ```
 
 ----
@@ -560,3 +567,5 @@ mnb.glue("bokeh_p", p, display=False)
 :figwidth: 300px
 :name: "bokeh_p"
 ```
+
+----
