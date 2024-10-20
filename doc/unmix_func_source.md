@@ -454,11 +454,11 @@ name: my-figure
 
 - A cross-pasted `any` role: {glue}`../doc/simple_notebook.ipynb::my_variableq`
 
-X {glue}`../doc/MYST_NB_TEST_BED.ipynb::MYST_TEST_BED`
+X {glue}`../doc/MYST_NB_TEST_BED.md::MYST_TEST_BED`
 
 
 ```{glue:figure} MYST_TEST_BED
-:doc: ../doc/MYST_NB_TEST_BED.ipynb
+:doc: ../doc/MYST_NB_TEST_BED.md
 :remove-output: false
 :remove-input: false
 :figwidth: 300px
