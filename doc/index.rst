@@ -16,4 +16,4 @@ Table of Contents
    myst_notebook.md
    unmix_func_source.md
    simple_notebook.ipynb
-   MYST_NB TEST BED.ipynb
+   MYST_NB TEST BED.md
