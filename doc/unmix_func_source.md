@@ -534,6 +534,10 @@ mnb.glue("plotly_fig", fig, display=False)
 :name: "plotly_fig"
 ```
 
+```{glue:} plotly_fig
+:name: "plotly_fig_nofig"
+```
+
 ----
 
 ```{code-cell} ipython3
@@ -566,6 +570,10 @@ mnb.glue("bokeh_p", p, display=False)
 ```{glue:figure} bokeh_p
 :figwidth: 300px
 :name: "bokeh_p"
+```
+
+```{glue:} bokeh_p
+:name: "bokeh_p_nofig"
 ```
 
 ----
