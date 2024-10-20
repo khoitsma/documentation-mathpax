@@ -513,12 +513,28 @@ import plotly.offline as py
 
 df = px.data.iris()
 fig = px.scatter(df, x="sepal_width", y="sepal_length", color="species", size="sepal_length")
+fig
 ```
 
 ```{code-cell} ipython3
-from bokeh.plotting import figure, show, output_notebook
-output_notebook()
+from bokeh.plotting import figure, show
+from bokeh.sampledata.penguins import data
+from bokeh.transform import factor_cmap, factor_mark
 
-p = figure()
-p.circle(data["sepal_width"], data["sepal_length"], fill_color=data["species"], size=data["sepal_length"])
+SPECIES = sorted(data.species.unique())
+MARKERS = ['hex', 'circle_x', 'triangle']
+
+p = figure(title = "Penguin size", background_fill_color="#fafafa")
+p.xaxis.axis_label = 'Flipper Length (mm)'
+p.yaxis.axis_label = 'Body Mass (g)'
+
+p.scatter("flipper_length_mm", "body_mass_g", source=data,
+          legend_group="species", fill_alpha=0.4, size=12,
+          marker=factor_mark('species', MARKERS, SPECIES),
+          color=factor_cmap('species', 'Category10_3', SPECIES))
+
+p.legend.location = "top_left"
+p.legend.title = "Species"
+
+show(p)
 ```
