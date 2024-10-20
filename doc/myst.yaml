@@ -2,6 +2,8 @@ version: 1
 project:
   title: Testing
   jupyter: true
+  github: https://github.com/khoitsma/my-myst-article
+  jupyter: 'binder'
 site:
   template: book-theme
   title: A Computational Website
