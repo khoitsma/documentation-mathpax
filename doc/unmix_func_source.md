@@ -507,6 +507,7 @@ a_{21}& =b_{21}&
 | an entire dataframe             | {glue}`../doc/MYST_NB_TEST_BED2.ipynb::MYST_TEST_BED`   | 4     |
 
 ```{code-cell} ipython3
+:tags: [show-output, show-input]
 import plotly.io as pio
 import plotly.express as px
 import plotly.offline as py
@@ -517,6 +518,7 @@ fig
 ```
 
 ```{code-cell} ipython3
+:tags: [show-output, show-input]
 from bokeh.plotting import figure, show
 from bokeh.sampledata.penguins import data
 from bokeh.transform import factor_cmap, factor_mark
