@@ -454,10 +454,10 @@ name: my-figure
 
 - {glue}`../doc/simple_notebook.ipynb::my_variableq`
 
-- XYZ {glue}`../doc/MYST_NB_TEST_BED.md::MYST_TEST_BED`
+- XYZ {glue}`../doc/MYST_NB_TEST_BED2.ipynb::MYST_TEST_BED`
 
 
-```{glue:figure} ../doc/MYST_NB_TEST_BED.md::MYST_TEST_BED
+```{glue:figure} ../doc/MYST_NB_TEST_BED2.ipynb::MYST_TEST_BED
 :figwidth: 300px
 :name: "MYST_TEST_BED"
 
