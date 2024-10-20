@@ -37,13 +37,13 @@ def unmix_func(x):
 # from myst_nb import glue
 import myst_nb as mnb
 
-a = "KLH"
+a = "sine"
 mnb.glue("my_variable_a", a, display=False)
-b = 3.1416
+b = "cosine"
 mnb.glue("my_variable_b", b, display=False)
 ```
 
-```{glue:} my_variable
+```{glue:} my_variable_a
 ```
 
 ```{code-cell} ipython3
@@ -107,9 +107,9 @@ temp = ''
 ```{glue:} my_variable_b
 ```
 
-Inline (1a) txt {glue:}`my_variable_a`, and fig {glue:}`glued_fig_b`.
+This is an example of inline text featuring a sparkline **{glue:}`my_variable_a`** wave, {glue:}`glued_fig_b`, emphasized.
 
-Inline (1b) txt {glue:}`my_variable_b`, and fig {glue:}`glued_fig_r`.
+This is an example of inline text featuring a sparkline **{glue:}`my_variable_b`** wave, {glue:}`glued_fig_r`, plain text.
 
 ```{code-cell} ipython3
 :tags: [hide-output, hide-input]
