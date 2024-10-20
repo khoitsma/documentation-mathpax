@@ -499,9 +499,9 @@ a_{21}& =b_{21}&
 \end{align}
 ```
 
-| name                            |       insert                |
-|:--------------------------------|----------------------------:|
-| **exact number of tosses**      | **{glue:}`exact_5H_in_10`** |
-| table of result                 | {glue:}`table_of_results`   |
-| a simple variable               | {glue}`../doc/simple_notebook.ipynb::my_variableq`      |
-| an entire dataframe             | {glue}`../doc/MYST_NB_TEST_BED2.ipynb::MYST_TEST_BED`   |
+| name                            |       insert                | item  |
+|:--------------------------------|----------------------------:|:-----:|
+| **exact number of tosses**      | **{glue:}`exact_5H_in_10`** | 1     |
+| table of result                 | {glue:}`table_of_results`   | 2     |
+| a simple variable               | {glue}`../doc/simple_notebook.ipynb::my_variableq`      | 3     |
+| an entire dataframe             | {glue}`../doc/MYST_NB_TEST_BED2.ipynb::MYST_TEST_BED`   | 4     |
