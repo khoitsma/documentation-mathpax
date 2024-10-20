@@ -107,9 +107,9 @@ temp = ''
 ```{glue:} my_variable_b
 ```
 
-This is an example of inline text featuring a sparkline **{glue:}`my_variable_a`** wave, {glue:}`glued_fig_b`, emphasized.
+This is an example of inline text featuring a sparkline **{glue:}`my_variable_a`** wave, {glue:}`glued_fig_b`, emphasized text.
 
-This is an example of inline text featuring a sparkline **{glue:}`my_variable_b`** wave, {glue:}`glued_fig_r`, plain text.
+This is an example of inline text featuring a sparkline *{glue:}`my_variable_b`* wave, {glue:}`glued_fig_r`, italics text.
 
 ```{code-cell} ipython3
 :tags: [hide-output, hide-input]
