@@ -460,8 +460,13 @@ name: my-figure
 
 
 ```{glue:figure} ../doc/MYST_NB_TEST_BED.md::MYST_TEST_BED
-:remove-output: false
-:remove-input: false
+:figwidth: 300px
+:name: "MYST_TEST_BED"
+
+A caption for a pandas table.
+```
+
+```{glue:figure} MYST_TEST_BED
 :figwidth: 300px
 :name: "MYST_TEST_BED"
 
