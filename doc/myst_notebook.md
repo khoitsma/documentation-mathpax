@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: '0.13'
-    jupytext_version: 1.13.8
+    jupytext_version: 1.16.4
 kernelspec:
   display_name: Python 3
   language: python
@@ -22,3 +22,7 @@ Here's some markdown text.
 
 ```{code-cell} ipython3
 print("Hello from a code cell!")
+
+```{code-cell} ipython3
+print("Hello from a code cell!")
+
