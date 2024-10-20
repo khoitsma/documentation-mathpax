@@ -18,4 +18,3 @@ Table of Contents
    simple_notebook.ipynb
    MYST_NB_TEST_BED2.ipynb
    bokeh_example.ipynb
-   plotly_example.ipynb
