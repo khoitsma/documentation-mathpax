@@ -452,13 +452,12 @@ name: my-figure
 ---
 ```
 
-- A cross-pasted `any` role: {glue}`../doc/simple_notebook.ipynb::my_variableq`
+- {glue}`../doc/simple_notebook.ipynb::my_variableq`
 
-X {glue}`../doc/MYST_NB_TEST_BED.md::MYST_TEST_BED`
+- X {glue}`../doc/MYST_NB_TEST_BED.md::MYST_TEST_BED`
 
 
-```{glue:figure} MYST_TEST_BED
-:doc: ../doc/MYST_NB_TEST_BED.md
+```{glue:figure} ../doc/MYST_NB_TEST_BED.md::MYST_TEST_BED
 :remove-output: false
 :remove-input: false
 :figwidth: 300px
@@ -468,8 +467,7 @@ A caption for a pandas table.
 ```
 
 % Embed both the input and output
-```{embed} my_variableq
-:doc: ../doc/simple_notebook.ipynb
+```{embed} ../doc/simple_notebook.ipynb::my_variableq
 :remove-output: false
 :remove-input: false
 ```
