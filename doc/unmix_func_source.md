@@ -506,19 +506,33 @@ a_{21}& =b_{21}&
 | a simple variable               | {glue}`../doc/simple_notebook.ipynb::my_variableq`      | 3     |
 | an entire dataframe             | {glue}`../doc/MYST_NB_TEST_BED2.ipynb::MYST_TEST_BED`   | 4     |
 
+----
+
 ```{code-cell} ipython3
 :tags: [show-output, show-input]
+import myst_nb as mnb
+
 import plotly.io as pio
 import plotly.express as px
 import plotly.offline as py
 
 df = px.data.iris()
 fig = px.scatter(df, x="sepal_width", y="sepal_length", color="species", size="sepal_length")
-fig
+
+mnb.glue("plotly_fig", fig, display=False)
 ```
+
+```{glue:figure} bokeh_p
+:figwidth: 300px
+:name: "bokeh_p"
+```
+
+----
 
 ```{code-cell} ipython3
 :tags: [show-output, show-input]
+import myst_nb as mnb
+
 from bokeh.plotting import figure, show
 from bokeh.sampledata.penguins import data
 from bokeh.transform import factor_cmap, factor_mark
@@ -538,5 +552,11 @@ p.scatter("flipper_length_mm", "body_mass_g", source=data,
 p.legend.location = "top_left"
 p.legend.title = "Species"
 
-show(p)
+# show(p)
+mnb.glue("bokeh_p", p, display=False)
+```
+
+```{glue:figure} bokeh_p
+:figwidth: 300px
+:name: "bokeh_p"
 ```
