@@ -505,3 +505,13 @@ a_{21}& =b_{21}&
 | table of result                 | {glue:}`table_of_results`   | 2     |
 | a simple variable               | {glue}`../doc/simple_notebook.ipynb::my_variableq`      | 3     |
 | an entire dataframe             | {glue}`../doc/MYST_NB_TEST_BED2.ipynb::MYST_TEST_BED`   | 4     |
+
+```{code-cell} ipython3
+import plotly.io as pio
+import plotly.express as px
+import plotly.offline as py
+
+df = px.data.iris()
+fig = px.scatter(df, x="sepal_width", y="sepal_length", color="species", size="sepal_length")
+fig
+```
