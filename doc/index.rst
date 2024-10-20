@@ -17,3 +17,4 @@ Table of Contents
    unmix_func_source.md
    simple_notebook.ipynb
    MYST_NB_TEST_BED2.ipynb
+   bokeh_example.ipynb
