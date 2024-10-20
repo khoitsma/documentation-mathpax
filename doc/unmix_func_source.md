@@ -515,3 +515,15 @@ df = px.data.iris()
 fig = px.scatter(df, x="sepal_width", y="sepal_length", color="species", size="sepal_length")
 fig
 ```
+
+```{code-cell} ipython3
+from bokeh.plotting import figure, show, output_notebook
+output_notebook()
+
+from bokeh.plotting import figure, show, output_notebook
+output_notebook()
+
+p = figure()
+p.circle(data["sepal_width"], data["sepal_length"], fill_color=data["species"], size=data["sepal_length"])
+show(p)
+```
