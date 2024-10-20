@@ -523,11 +523,17 @@ import plotly.io as pio
 import plotly.express as px
 import plotly.offline as py
 
+import panel as pn
+pn.extension('plotly')
+
+def gluePlotly(name,fig,**kwargs):
+    """Wrap Plotly object with Panel and glue()"""
+    return mnb.glue(name, pn.pane.Plotly(fig,**kwargs), display=False)
+
 df = px.data.iris()
 fig = px.scatter(df, x="sepal_width", y="sepal_length", color="species", size="sepal_length")
 
-
-mnb.glue("plotly_fig", show(fig), display=False)
+gluePlotly("plotly_fig", fig, display=False)
 ```
 
 ```{glue:figure} plotly_fig
