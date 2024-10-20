@@ -33,6 +33,8 @@ jobs:
           pip install -U jupyter-book
           pip install myst-nb
           pip install pandas
+          pip install plotly
+          pip install bokeh
       - name: Sphinx build
         run: |
           sphinx-build doc _build
