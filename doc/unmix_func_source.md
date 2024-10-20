@@ -498,3 +498,10 @@ a_{21}& =b_{21}&
   a_{22}& =b_{22}+c_{22}
 \end{align}
 ```
+
+| name                            |       insert                |
+|:--------------------------------|----------------------------:|
+| **exact number of tosses**      | **{glue:}`exact_5H_in_10`** |
+| table of result                 | {glue:}`table_of_results`   |
+| a simple variable               | {glue}`../doc/simple_notebook.ipynb::my_variableq`      |
+| an entire dataframe             | {glue}`../doc/MYST_NB_TEST_BED2.ipynb::MYST_TEST_BED`   |
