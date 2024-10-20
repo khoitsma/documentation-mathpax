@@ -36,6 +36,7 @@ jobs:
           pip install plotly
           pip install bokeh
           pip install bokeh_sampledata
+          pip install panel
       - name: Sphinx build
         run: |
           sphinx-build doc _build
