@@ -10,6 +10,16 @@ kernelspec:
   name: python3
 ---
 
+My favorite search engine is [Duck Duck Go](https://duckduckgo.com).
+
+Link to my non-Sphinx HTML file
+===============================
+
+To get to my standalone, non-generated HTML file, 
+just [click here](M1_plot.html)
+
+----
+
 ```python
 from random import random 
 @xl_func("object x: var")
