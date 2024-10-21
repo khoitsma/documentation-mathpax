@@ -10,12 +10,6 @@ kernelspec:
   name: python3
 ---
 
-Link to my non-Sphinx HTML file
-===============================
-
-To get to my standalone, non-generated HTML file, 
-just `click here <../doc/M1_plot.html>`_ now!
-
 ```python
 from random import random 
 @xl_func("object x: var")
