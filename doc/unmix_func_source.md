@@ -523,12 +523,9 @@ Link to my non-Sphinx Plotly HTML file
 To get to my standalone, non-generated Plotly HTML file, 
 just ([click here 1](https://khoitsmahq.firstcloudit.com/images/M1_plot.html))
 
-To get to my standalone, non-generated Plotly HTML file, 
-just ([click here 2](../_static/M1_plot.html))
-
 ```{image} https://khoitsmahq.firstcloudit.com/images/Snag_3.png?raw=true
 :alt: My embedded plot
-:width: 150px
+:width: 64px
 :align: center
 ```
 ----
