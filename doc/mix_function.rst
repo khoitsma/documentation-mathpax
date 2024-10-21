@@ -25,3 +25,9 @@ Disclosure:
 
 .. include:: mix_func_source.md
    :parser: myst_parser.sphinx_
+
+Link to my non-Sphinx HTML file
+===============================
+
+To get to my standalone, non-generated HTML file, 
+just `click here <../doc/M1_plot.html>`_ now!
