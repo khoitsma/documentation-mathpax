@@ -18,6 +18,12 @@ Link to my non-Sphinx HTML file
 To get to my standalone, non-generated HTML file, 
 just [click here](M1_plot.html)
 
+```{image} M1_plot.html?raw=true
+:alt: My embedded plot
+:width: 500px
+:align: center
+```
+
 ----
 
 ```python
