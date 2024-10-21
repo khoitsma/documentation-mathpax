@@ -18,4 +18,4 @@ Table of Contents
    simple_notebook.ipynb
    MYST_NB_TEST_BED2.ipynb
    bokeh_example.ipynb
-   Point loads and partial uniform loads using calculus.md
+   M1_plot.html
