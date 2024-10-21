@@ -10,6 +10,9 @@ kernelspec:
   name: python3
 ---
 
+.. raw:: 
+    :file: M1_plot.html
+
 ```python
 from random import random 
 @xl_func("object x: var")
