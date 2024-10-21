@@ -20,3 +20,6 @@ Raises:
 
 .. include:: unmix_func_source.md
    :parser: myst_parser.sphinx_
+
+.. raw:: 
+    :file: M1_plot.html
