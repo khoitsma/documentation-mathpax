@@ -30,4 +30,4 @@ Link to my non-Sphinx HTML file
 ===============================
 
 To get to my standalone, non-generated HTML file, 
-just `click here <../doc/M1_plot.html>`_ now!
+just `click here <M1_plot.html>`_ now!
