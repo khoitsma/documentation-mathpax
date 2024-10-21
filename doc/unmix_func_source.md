@@ -521,7 +521,7 @@ Link to my non-Sphinx Plotly HTML file
 ======================================
 
 To get to my standalone, non-generated Plotly HTML file, 
-just [click here](M1_plot.html?raw=true)
+just `click here <M1_plot.html>`
 
 ```{image} https://khoitsmahq.firstcloudit.com/images/Snag_3.png?raw=true
 :alt: My embedded plot
