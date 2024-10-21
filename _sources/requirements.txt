@@ -1,0 +1,4 @@
+sphinx
+cloud_sptheme
+docutils>=0.21
+JupyterLab >= 4.0.0
