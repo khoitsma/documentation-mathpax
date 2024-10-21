@@ -10,19 +10,6 @@ kernelspec:
   name: python3
 ---
 
-My favorite search engine is [Duck Duck Go](https://duckduckgo.com).
-
-Link to my non-Sphinx HTML file
-===============================
-
-To get to my standalone, non-generated HTML file, 
-just [click here](M1_plot.html)
-
-```{image} M1_plot.html
-:alt: My embedded plot
-:align: center
-```
-
 ----
 
 ```python
@@ -528,4 +515,17 @@ a_{21}& =b_{21}&
 | a simple variable               | {glue}`../doc/simple_notebook.ipynb::my_variableq`      | 3     |
 | an entire dataframe             | {glue}`../doc/MYST_NB_TEST_BED2.ipynb::MYST_TEST_BED`   | 4     |
 
+----
+
+Link to my non-Sphinx Plotly HTML file
+======================================
+
+To get to my standalone, non-generated Plotly HTML file, 
+just [click here](M1_plot.html)
+
+```{image} https://khoitsmahq.firstcloudit.com/images/Snag_3.png?raw=true
+:alt: My embedded plot
+:width: 500px
+:align: center
+```
 ----
