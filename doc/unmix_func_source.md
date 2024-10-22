@@ -521,7 +521,7 @@ Link to my non-Sphinx Plotly HTML file
 ======================================
 
 ----
-1
+***1 NOT BAD***
 <iframe
   src="https://khoitsmahq.firstcloudit.com/images/M1_plot.html"
   width=850px
@@ -529,10 +529,16 @@ Link to my non-Sphinx Plotly HTML file
 ></iframe>
 
 ----
-2
+***2 GOOD***
 
 To get to my standalone, non-generated Plotly HTML file, 
 just **([click here BEST](https://khoitsmahq.firstcloudit.com/images/M1_plot.html))**
+
+----
+***3 EXCELLENT***
+```{eval-rst}
+.. include:: html_rst.rst
+```
 
 ----
 
@@ -545,7 +551,3 @@ Embedded .png image
 :align: center
 ```
 ----
-
-```{eval-rst}
-.. include:: html_rst.rst
-```
