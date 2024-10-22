@@ -522,8 +522,7 @@ Link to my non-Sphinx Plotly HTML file
 
 ----
 1
-<img
-  src="https://khoitsmahq.firstcloudit.com/images/M1_plot.html"
+<img src="https://khoitsmahq.firstcloudit.com/images/M1_plot.html"
 ></img>
 
 ----
@@ -533,7 +532,7 @@ Link to my non-Sphinx Plotly HTML file
   scrolling=no
   width=100%
   position=absolute
-  height=100%
+  height=450px
   border=none
 ></iframe>
 
@@ -542,7 +541,7 @@ Link to my non-Sphinx Plotly HTML file
 <iframe
   src="https://khoitsma.github.io/documentation-mathpax/_images/M1_plot.html"
   scrolling=no
-  width=70%
+  height=450px
 ></iframe>
 
 ----
