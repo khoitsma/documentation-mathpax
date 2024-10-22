@@ -524,13 +524,14 @@ Link to my non-Sphinx Plotly HTML file
 
 <iframe
   src="https://khoitsmahq.firstcloudit.com/images/M1_plot.html"
+  scrolling=no
 ></iframe>
 
 ----
 
 <iframe
   src="https://khoitsma.github.io/documentation-mathpax/_images/M1_plot.html"
-  style="width:50%"
+  scrolling=no
 ></iframe>
 
 ----
