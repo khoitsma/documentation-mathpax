@@ -522,12 +522,25 @@ Link to my non-Sphinx Plotly HTML file
 
 ----
 
+<iframe
+  src="https://khoitsmahq.firstcloudit.com/images/M1_plot.html"
+  style="width:100%; height:300px;"
+></iframe>
+
+----
+
+<iframe
+  src="../doc/M1_plot.html"
+  style="width:100%; height:300px;"
+></iframe>
+
+----
+
 ```{figure} ../doc/M1_plot.html
 ---
 height: 150px
 name: my-figure45
 ---
-```
 ```
 
 ----
