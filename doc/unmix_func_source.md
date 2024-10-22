@@ -530,7 +530,7 @@ Link to my non-Sphinx Plotly HTML file
 ----
 
 <iframe
-  src="M1_plot.html"
+  src="../_images/M1_plot.html"
   style="width:100%"
 ></iframe>
 
