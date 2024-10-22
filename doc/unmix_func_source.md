@@ -522,8 +522,9 @@ Link to my non-Sphinx Plotly HTML file
 
 ----
 1
-<img src="https://khoitsmahq.firstcloudit.com/images/M1_plot.html"
-></img>
+```{eval-rst}
+.. include:: html_rst.rst
+```
 
 ----
 2
