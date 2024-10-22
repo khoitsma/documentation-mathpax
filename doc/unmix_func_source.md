@@ -531,7 +531,7 @@ Link to my non-Sphinx Plotly HTML file
 ----
 2
 <iframe
-  src="https://khoitsma.github.io/documentation-mathpax/_images/M1_plot.html"
+  src="https://khoitsma.github.io/documentation-mathpax/_static/M1_plot.html"
   width=850px
   height=600px
 ></iframe>
