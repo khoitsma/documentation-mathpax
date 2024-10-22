@@ -530,14 +530,6 @@ Link to my non-Sphinx Plotly HTML file
 
 ----
 2
-<iframe
-  src="https://khoitsma.github.io/documentation-mathpax/_static/M1_plot.html"
-  width=850px
-  height=600px
-></iframe>
-
-----
-3
 
 To get to my standalone, non-generated Plotly HTML file, 
 just **([click here BEST](https://khoitsmahq.firstcloudit.com/images/M1_plot.html))**
