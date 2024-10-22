@@ -553,3 +553,7 @@ Embedded .png image
 :align: center
 ```
 ----
+
+```{eval-rst}
+.. include:: html_rst.rst
+```
