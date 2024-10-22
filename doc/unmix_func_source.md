@@ -521,22 +521,24 @@ Link to my non-Sphinx Plotly HTML file
 ======================================
 
 ----
-
+1
 <img src=“
   src="https://khoitsmahq.firstcloudit.com/images/M1_plot.html"
 ></img>
 
+----
+2
 <iframe
   src="https://khoitsmahq.firstcloudit.com/images/M1_plot.html"
   scrolling=no
   width=100%
-  position= absolute
-  height = 100%
-  border = none
+  position=absolute
+  height=100%
+  border=none
 ></iframe>
 
 ----
-
+3
 <iframe
   src="https://khoitsma.github.io/documentation-mathpax/_images/M1_plot.html"
   scrolling=no
@@ -544,7 +546,7 @@ Link to my non-Sphinx Plotly HTML file
 ></iframe>
 
 ----
-
+4
 ```{figure} ../doc/M1_plot.html
 ---
 height: 150px
@@ -553,7 +555,7 @@ name: my-figure45
 ```
 
 ----
-
+5
 ```{image} M1_plot.html
 :alt: EXCITING IMAGE
 :width: 200px
@@ -561,7 +563,7 @@ name: my-figure45
 ```
 
 ----
-
+6
 Click ([here_on_these_words](M1_plot.html)) to **open** the HTML page.
 
 To get to my standalone, non-generated Plotly HTML file, 
