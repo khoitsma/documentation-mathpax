@@ -4,17 +4,13 @@ from random import random
 @xl_func("int x: object")
 def mix_func(x):
     """Return a list of x random values
-
     Args:
         x: integer number of values to produce
-        
     Returns:
         an x-length list of random numbers
-        
     Raises:
         zero, if x == 0
         "Function error" if function fails
-
     Disclosure:
         Lifted from Page 56 of https://www.pyxll.com/docs/pyxll-5.5.4.pdf         
     """
