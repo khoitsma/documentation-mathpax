@@ -520,11 +520,25 @@ a_{21}& =b_{21}&
 Link to my non-Sphinx Plotly HTML file
 ======================================
 
+----
+
+```{figure} M1_plot.html
+---
+height: 150px
+name: my-figure45
+---
+```
+```
+
+----
+
 ```{image} M1_plot.html
 :alt: EXCITING IMAGE
 :width: 200px
 :align: center
 ```
+
+----
 
 Click ([here_on_these_words](M1_plot.html)) to **open** the HTML page.
 
