@@ -522,6 +522,10 @@ Link to my non-Sphinx Plotly HTML file
 
 ----
 
+<img src=“
+  src="https://khoitsmahq.firstcloudit.com/images/M1_plot.html"
+></img>
+
 <iframe
   src="https://khoitsmahq.firstcloudit.com/images/M1_plot.html"
   scrolling=no
