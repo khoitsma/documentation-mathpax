@@ -17,13 +17,10 @@ from random import random
 @xl_func("object x: var")
 def unmix_func(x):
     """Return a list of lists
-
     Args:
         x: a 1-dimensional list object
-        
     Returns:
         a list of lists (suitable for PyXLL) 
-        
     Raises:
         "empty" if function fails
     """
@@ -80,7 +77,6 @@ import myst_nb as mnb
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-
 
 x = np.linspace(0, 10, 200)
 y = np.cos(x)
