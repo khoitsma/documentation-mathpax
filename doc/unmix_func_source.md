@@ -530,6 +530,9 @@ Link to my non-Sphinx Plotly HTML file
   src="https://khoitsmahq.firstcloudit.com/images/M1_plot.html"
   scrolling=no
   width=100%
+  position= absolute
+  height = 100%
+  border = none
 ></iframe>
 
 ----
