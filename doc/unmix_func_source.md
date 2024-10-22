@@ -522,7 +522,7 @@ Link to my non-Sphinx Plotly HTML file
 
 ----
 
-```{figure} M1_plot.html
+```{figure} ../doc/M1_plot.html
 ---
 height: 150px
 name: my-figure45
