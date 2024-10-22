@@ -520,7 +520,7 @@ a_{21}& =b_{21}&
 Link to my non-Sphinx Plotly HTML file
 ======================================
 
-Click ([here](M1_plot.html)) to **open** the HTML page.
+Click ([here_on_these_words](M1_plot.html)) to **open** the HTML page.
 
 To get to my standalone, non-generated Plotly HTML file, 
 just ([click here 1](https://khoitsmahq.firstcloudit.com/images/M1_plot.html))
