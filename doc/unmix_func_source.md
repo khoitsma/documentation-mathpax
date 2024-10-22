@@ -547,7 +547,7 @@ Embedded .png image
 
 ```{image} https://khoitsmahq.firstcloudit.com/images/Snag_3.png?raw=true
 :alt: My embedded plot
-:width: 64px
-:align: center
+:width: 300px
+:align: right
 ```
 ----
