@@ -530,14 +530,16 @@ Link to my non-Sphinx Plotly HTML file
 2
 <iframe
   src="https://khoitsmahq.firstcloudit.com/images/M1_plot.html"
-  height=900px
+  width=600px
+  height=600px
 ></iframe>
 
 ----
 3
 <iframe
   src="https://khoitsma.github.io/documentation-mathpax/_images/M1_plot.html"
-  height=450px
+  width=700px
+  height=600px
 ></iframe>
 
 ----
