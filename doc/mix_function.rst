@@ -26,11 +26,17 @@ Disclosure:
 .. include:: mix_func_source.md
    :parser: myst_parser.sphinx_
 
+.. plotly::
+
+   import plotly.express as px
+
+   px.scatter(x=[0, 1, 2, 3, 4], y=[0, 1, 4, 9, 16])
+
 .. plotly:: 
+
    :iframe-width: 500px
    :iframe-height: 300px
 
    import plotly.express as px
 
    px.scatter(x=[0, 1, 2, 3, 4], y=[0, 1, 4, 9, 16])
-
