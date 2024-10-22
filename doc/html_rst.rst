@@ -1,2 +1,2 @@
 .. raw:: html
-   :file: M1_plot.html
+   :file: ../_static/M1_plot.html
