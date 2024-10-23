@@ -26,9 +26,9 @@ Disclosure:
 .. include:: mix_func_source.md
    :parser: myst_parser.sphinx_
 
-% Plotly doesn't work with Sphinx
+***Plotly does work within Sphinx, but we don't see the plot; the HTML file is correctly saved
 .. plotly::
 
    import plotly.express as px
    fig = px.bar(x=["a", "b", "c"], y=[1, 3, 2])
-   fig.write_html('first_figure.html', auto_open=True)
+   fig.write_html('../_static/first_figure.html', auto_open=True)
