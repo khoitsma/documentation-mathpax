@@ -32,4 +32,5 @@ Disclosure:
    :iframe-height: 300px
 
    import plotly.express as px
-   px.scatter(x=[0, 1, 2, 3, 4], y=[0, 1, 4, 9, 16])
+   fig = px.bar(x=["a", "b", "c"], y=[1, 3, 2])
+   fig.write_html('first_figure.html', auto_open=True)
