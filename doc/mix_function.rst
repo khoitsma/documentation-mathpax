@@ -26,7 +26,8 @@ Disclosure:
 .. include:: mix_func_source.md
    :parser: myst_parser.sphinx_
 
-***Plotly does work within Sphinx, but we don't see the plot; the HTML file is correctly saved
+***Plotly doesn't seem to work with Sphinx***
+
 .. plotly::
 
    import plotly.express as px
