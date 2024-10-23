@@ -71,7 +71,6 @@ myst_enable_extensions = [
     "linkify",
     "replacements",
     "smartquotes",
-    "sphinx_plotly_directive",
     "strikethrough",
     "substitution",
     "tasklist",
