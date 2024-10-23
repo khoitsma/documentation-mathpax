@@ -34,8 +34,7 @@ jobs:
           pip install myst-nb
           pip install pandas
           pip install plotly
-          pip install sphinx-plotly-directive
-          pip install sphinxcontrib-plotly
+          pip install git+https://github.com/harupy/sphinx-plotly-directive.git
           pip install bokeh
           pip install bokeh_sampledata
           pip install panel
