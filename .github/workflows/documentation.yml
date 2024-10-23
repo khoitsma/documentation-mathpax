@@ -35,6 +35,7 @@ jobs:
           pip install pandas
           pip install plotly
           pip install sphinx-plotly-directive
+          pip install sphinxcontrib-plotly
           pip install bokeh
           pip install bokeh_sampledata
           pip install panel
