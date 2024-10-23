@@ -26,6 +26,7 @@ Disclosure:
 .. include:: mix_func_source.md
    :parser: myst_parser.sphinx_
 
+% Plotly doesn't work with Sphinx
 .. plotly::
    :iframe-width: 500px
    :iframe-height: 300px
