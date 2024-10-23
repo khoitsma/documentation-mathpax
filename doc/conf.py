@@ -51,7 +51,6 @@ myst_enable_extensions = [
     "replacements",
     "smartquotes",
     "sphinx_plotly_directive",
-    "sphinxcontrib.plotly",
     "strikethrough",
     "substitution",
     "tasklist",
