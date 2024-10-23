@@ -1,0 +1,515 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>bokeh example &mdash; Mathpax Blog  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="MYST_NB_TEST_BED2" href="MYST_NB_TEST_BED2.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: white" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Mathpax Blog
+              <img src="https://khoitsmahq.firstcloudit.com/images/mp_small3.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="readme_doc.html">interval_filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mix_function.html">mix_func</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unmix_function.html">unmix_func</a></li>
+<li class="toctree-l1"><a class="reference internal" href="myst_notebook.html">My MyST Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unmix_func_source.html">Model Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unmix_func_source.html#link-to-my-non-sphinx-plotly-html-file">Link to my non-Sphinx Plotly HTML file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unmix_func_source.html#embedded-png-image">Embedded .png image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simple_notebook.html">simple_notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MYST_NB_TEST_BED2.html">MYST_NB_TEST_BED2</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">bokeh example</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: white" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Mathpax Blog</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">bokeh example</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/bokeh_example.ipynb.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="MYST_NB_TEST_BED2.html" class="btn btn-neutral float-left" title="MYST_NB_TEST_BED2" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="bokeh-example">
+<h1>bokeh example<a class="headerlink" href="#bokeh-example" title="Link to this heading"></a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import myst_nb as mnb</span>
+
+<span class="kn">from</span> <span class="nn">bokeh.plotting</span> <span class="kn">import</span> <span class="n">figure</span><span class="p">,</span> <span class="n">show</span>
+<span class="kn">from</span> <span class="nn">bokeh.sampledata.penguins</span> <span class="kn">import</span> <span class="n">data</span>
+<span class="kn">from</span> <span class="nn">bokeh.transform</span> <span class="kn">import</span> <span class="n">factor_cmap</span><span class="p">,</span> <span class="n">factor_mark</span>
+
+<span class="kn">import</span> <span class="nn">bokeh.io</span>
+<span class="c1"># this is here only for completeness to clarify where</span>
+<span class="c1"># the methods are nested (you probably already imported this earlier)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bokeh</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">reset_output</span><span class="p">()</span>
+<span class="n">bokeh</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">output_notebook</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">    <style>
+        .bk-notebook-logo {
+            display: block;
+            width: 20px;
+            height: 20px;
+            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABx0RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNui8sowAAAOkSURBVDiNjZRtaJVlGMd/1/08zzln5zjP1LWcU9N0NkN8m2CYjpgQYQXqSs0I84OLIC0hkEKoPtiH3gmKoiJDU7QpLgoLjLIQCpEsNJ1vqUOdO7ppbuec5+V+rj4ctwzd8IIbbi6u+8f1539dt3A78eXC7QizUF7gyV1fD1Yqg4JWz84yffhm0qkFqBogB9rM8tZdtwVsPUhWhGcFJngGeWrPzHm5oaMmkfEg1usvLFyc8jLRqDOMru7AyC8saQr7GG7f5fvDeH7Ej8CM66nIF+8yngt6HWaKh7k49Soy9nXurCi1o3qUbS3zWfrYeQDTB/Qj6kX6Ybhw4B+bOYoLKCC9H3Nu/leUTZ1JdRWkkn2ldcCamzrcf47KKXdAJllSlxAOkRgyHsGC/zRday5Qld9DyoM4/q/rUoy/CXh3jzOu3bHUVZeU+DEn8FInkPBFlu3+nW3Nw0mk6vCDiWg8CeJaxEwuHS3+z5RgY+YBR6V1Z1nxSOfoaPa4LASWxxdNp+VWTk7+4vzaou8v8PN+xo+KY2xsw6une2frhw05CTYOmQvsEhjhWjn0bmXPjpE1+kplmmkP3suftwTubK9Vq22qKmrBhpY4jvd5afdRA3wGjFAgcnTK2s4hY0/GPNIb0nErGMCRxWOOX64Z8RAC4oCXdklmEvcL8o0BfkNK4lUg9HTl+oPlQxdNo3Mg4Nv175e/1LDGzZen30MEjRUtmXSfiTVu1kK8W4txyV6BMKlbgk3lMwYCiusNy9fVfvvwMxv8Ynl6vxoByANLTWplvuj/nF9m2+PDtt1eiHPBr1oIfhCChQMBw6Aw0UulqTKZdfVvfG7VcfIqLG9bcldL/+pdWTLxLUy8Qq38heUIjh4XlzZxzQm19lLFlr8vdQ97rjZVOLf8nclzckbcD4wxXMidpX30sFd37Fv/GtwwhzhxGVAprjbg0gCAEeIgwCZyTV2Z1REEW8O4py0wsjeloKoMr6iCY6dP92H6Vw/oTyICIthibxjm/DfN9lVz8IqtqKYLUXfoKVMVQVVJOElGjrnnUt9T9wbgp8AyYKaGlqingHZU/uG2NTZSVqwHQTWkx9hxjkpWDaCg6Ckj5qebgBVbT3V3NNXMSiWSDdGV3hrtzla7J+duwPOToIg42ChPQOQjspnSlp1V+Gjdged7+8UN5CRAV7a5EdFNwCjEaBR27b3W890TE7g24NAP/mMDXRWrGoFPQI9ls/MWO2dWFAar/xcOIImbbpA3zgAAAABJRU5ErkJggg==);
+        }
+    </style>
+    <div>
+        <a href="https://bokeh.org" target="_blank" class="bk-notebook-logo"></a>
+        <span id="eeadbde8-7974-492d-b5be-6d99ba38e25c">Loading BokehJS ...</span>
+    </div>
+</div><script type="application/javascript">'use strict';
+(function(root) {
+  function now() {
+    return new Date();
+  }
+
+  const force = true;
+
+  if (typeof root._bokeh_onload_callbacks === "undefined" || force === true) {
+    root._bokeh_onload_callbacks = [];
+    root._bokeh_is_loading = undefined;
+  }
+
+const JS_MIME_TYPE = 'application/javascript';
+  const HTML_MIME_TYPE = 'text/html';
+  const EXEC_MIME_TYPE = 'application/vnd.bokehjs_exec.v0+json';
+  const CLASS_NAME = 'output_bokeh rendered_html';
+
+  /**
+   * Render data to the DOM node
+   */
+  function render(props, node) {
+    const script = document.createElement("script");
+    node.appendChild(script);
+  }
+
+  /**
+   * Handle when an output is cleared or removed
+   */
+  function handleClearOutput(event, handle) {
+    function drop(id) {
+      const view = Bokeh.index.get_by_id(id)
+      if (view != null) {
+        view.model.document.clear()
+        Bokeh.index.delete(view)
+      }
+    }
+
+    const cell = handle.cell;
+
+    const id = cell.output_area._bokeh_element_id;
+    const server_id = cell.output_area._bokeh_server_id;
+
+    // Clean up Bokeh references
+    if (id != null) {
+      drop(id)
+    }
+
+    if (server_id !== undefined) {
+      // Clean up Bokeh references
+      const cmd_clean = "from bokeh.io.state import curstate; print(curstate().uuid_to_server['" + server_id + "'].get_sessions()[0].document.roots[0]._id)";
+      cell.notebook.kernel.execute(cmd_clean, {
+        iopub: {
+          output: function(msg) {
+            const id = msg.content.text.trim()
+            drop(id)
+          }
+        }
+      });
+      // Destroy server and session
+      const cmd_destroy = "import bokeh.io.notebook as ion; ion.destroy_server('" + server_id + "')";
+      cell.notebook.kernel.execute(cmd_destroy);
+    }
+  }
+
+  /**
+   * Handle when a new output is added
+   */
+  function handleAddOutput(event, handle) {
+    const output_area = handle.output_area;
+    const output = handle.output;
+
+    // limit handleAddOutput to display_data with EXEC_MIME_TYPE content only
+    if ((output.output_type != "display_data") || (!Object.prototype.hasOwnProperty.call(output.data, EXEC_MIME_TYPE))) {
+      return
+    }
+
+    const toinsert = output_area.element.find("." + CLASS_NAME.split(' ')[0]);
+
+    if (output.metadata[EXEC_MIME_TYPE]["id"] !== undefined) {
+      toinsert[toinsert.length - 1].firstChild.textContent = output.data[JS_MIME_TYPE];
+      // store reference to embed id on output_area
+      output_area._bokeh_element_id = output.metadata[EXEC_MIME_TYPE]["id"];
+    }
+    if (output.metadata[EXEC_MIME_TYPE]["server_id"] !== undefined) {
+      const bk_div = document.createElement("div");
+      bk_div.innerHTML = output.data[HTML_MIME_TYPE];
+      const script_attrs = bk_div.children[0].attributes;
+      for (let i = 0; i < script_attrs.length; i++) {
+        toinsert[toinsert.length - 1].firstChild.setAttribute(script_attrs[i].name, script_attrs[i].value);
+        toinsert[toinsert.length - 1].firstChild.textContent = bk_div.children[0].textContent
+      }
+      // store reference to server id on output_area
+      output_area._bokeh_server_id = output.metadata[EXEC_MIME_TYPE]["server_id"];
+    }
+  }
+
+  function register_renderer(events, OutputArea) {
+
+    function append_mime(data, metadata, element) {
+      // create a DOM node to render to
+      const toinsert = this.create_output_subarea(
+        metadata,
+        CLASS_NAME,
+        EXEC_MIME_TYPE
+      );
+      this.keyboard_manager.register_events(toinsert);
+      // Render to node
+      const props = {data: data, metadata: metadata[EXEC_MIME_TYPE]};
+      render(props, toinsert[toinsert.length - 1]);
+      element.append(toinsert);
+      return toinsert
+    }
+
+    /* Handle when an output is cleared or removed */
+    events.on('clear_output.CodeCell', handleClearOutput);
+    events.on('delete.Cell', handleClearOutput);
+
+    /* Handle when a new output is added */
+    events.on('output_added.OutputArea', handleAddOutput);
+
+    /**
+     * Register the mime type and append_mime function with output_area
+     */
+    OutputArea.prototype.register_mime_type(EXEC_MIME_TYPE, append_mime, {
+      /* Is output safe? */
+      safe: true,
+      /* Index of renderer in `output_area.display_order` */
+      index: 0
+    });
+  }
+
+  // register the mime type if in Jupyter Notebook environment and previously unregistered
+  if (root.Jupyter !== undefined) {
+    const events = require('base/js/events');
+    const OutputArea = require('notebook/js/outputarea').OutputArea;
+
+    if (OutputArea.prototype.mime_types().indexOf(EXEC_MIME_TYPE) == -1) {
+      register_renderer(events, OutputArea);
+    }
+  }
+  if (typeof (root._bokeh_timeout) === "undefined" || force === true) {
+    root._bokeh_timeout = Date.now() + 5000;
+    root._bokeh_failed_load = false;
+  }
+
+  const NB_LOAD_WARNING = {'data': {'text/html':
+     "<div style='background-color: #fdd'>\n"+
+     "<p>\n"+
+     "BokehJS does not appear to have successfully loaded. If loading BokehJS from CDN, this \n"+
+     "may be due to a slow or bad network connection. Possible fixes:\n"+
+     "</p>\n"+
+     "<ul>\n"+
+     "<li>re-rerun `output_notebook()` to attempt to load from CDN again, or</li>\n"+
+     "<li>use INLINE resources instead, as so:</li>\n"+
+     "</ul>\n"+
+     "<code>\n"+
+     "from bokeh.resources import INLINE\n"+
+     "output_notebook(resources=INLINE)\n"+
+     "</code>\n"+
+     "</div>"}};
+
+  function display_loaded(error = null) {
+    const el = document.getElementById("eeadbde8-7974-492d-b5be-6d99ba38e25c");
+    if (el != null) {
+      const html = (() => {
+        if (typeof root.Bokeh === "undefined") {
+          if (error == null) {
+            return "BokehJS is loading ...";
+          } else {
+            return "BokehJS failed to load.";
+          }
+        } else {
+          const prefix = `BokehJS ${root.Bokeh.version}`;
+          if (error == null) {
+            return `${prefix} successfully loaded.`;
+          } else {
+            return `${prefix} <b>encountered errors</b> while loading and may not function as expected.`;
+          }
+        }
+      })();
+      el.innerHTML = html;
+
+      if (error != null) {
+        const wrapper = document.createElement("div");
+        wrapper.style.overflow = "auto";
+        wrapper.style.height = "5em";
+        wrapper.style.resize = "vertical";
+        const content = document.createElement("div");
+        content.style.fontFamily = "monospace";
+        content.style.whiteSpace = "pre-wrap";
+        content.style.backgroundColor = "rgb(255, 221, 221)";
+        content.textContent = error.stack ?? error.toString();
+        wrapper.append(content);
+        el.append(wrapper);
+      }
+    } else if (Date.now() < root._bokeh_timeout) {
+      setTimeout(() => display_loaded(error), 100);
+    }
+  }
+
+  function run_callbacks() {
+    try {
+      root._bokeh_onload_callbacks.forEach(function(callback) {
+        if (callback != null)
+          callback();
+      });
+    } finally {
+      delete root._bokeh_onload_callbacks
+    }
+    console.debug("Bokeh: all callbacks have finished");
+  }
+
+  function load_libs(css_urls, js_urls, callback) {
+    if (css_urls == null) css_urls = [];
+    if (js_urls == null) js_urls = [];
+
+    root._bokeh_onload_callbacks.push(callback);
+    if (root._bokeh_is_loading > 0) {
+      console.debug("Bokeh: BokehJS is being loaded, scheduling callback at", now());
+      return null;
+    }
+    if (js_urls == null || js_urls.length === 0) {
+      run_callbacks();
+      return null;
+    }
+    console.debug("Bokeh: BokehJS not loaded, scheduling load and callback at", now());
+    root._bokeh_is_loading = css_urls.length + js_urls.length;
+
+    function on_load() {
+      root._bokeh_is_loading--;
+      if (root._bokeh_is_loading === 0) {
+        console.debug("Bokeh: all BokehJS libraries/stylesheets loaded");
+        run_callbacks()
+      }
+    }
+
+    function on_error(url) {
+      console.error("failed to load " + url);
+    }
+
+    for (let i = 0; i < css_urls.length; i++) {
+      const url = css_urls[i];
+      const element = document.createElement("link");
+      element.onload = on_load;
+      element.onerror = on_error.bind(null, url);
+      element.rel = "stylesheet";
+      element.type = "text/css";
+      element.href = url;
+      console.debug("Bokeh: injecting link tag for BokehJS stylesheet: ", url);
+      document.body.appendChild(element);
+    }
+
+    for (let i = 0; i < js_urls.length; i++) {
+      const url = js_urls[i];
+      const element = document.createElement('script');
+      element.onload = on_load;
+      element.onerror = on_error.bind(null, url);
+      element.async = false;
+      element.src = url;
+      console.debug("Bokeh: injecting script tag for BokehJS library: ", url);
+      document.head.appendChild(element);
+    }
+  };
+
+  function inject_raw_css(css) {
+    const element = document.createElement("style");
+    element.appendChild(document.createTextNode(css));
+    document.body.appendChild(element);
+  }
+
+  const js_urls = ["https://cdn.bokeh.org/bokeh/release/bokeh-3.6.0.min.js", "https://cdn.bokeh.org/bokeh/release/bokeh-gl-3.6.0.min.js", "https://cdn.bokeh.org/bokeh/release/bokeh-widgets-3.6.0.min.js", "https://cdn.bokeh.org/bokeh/release/bokeh-tables-3.6.0.min.js", "https://cdn.bokeh.org/bokeh/release/bokeh-mathjax-3.6.0.min.js"];
+  const css_urls = [];
+
+  const inline_js = [    function(Bokeh) {
+      Bokeh.set_log_level("info");
+    },
+function(Bokeh) {
+    }
+  ];
+
+  function run_inline_js() {
+    if (root.Bokeh !== undefined || force === true) {
+      try {
+            for (let i = 0; i < inline_js.length; i++) {
+      inline_js[i].call(root, root.Bokeh);
+    }
+
+      } catch (error) {display_loaded(error);throw error;
+      }if (force === true) {
+        display_loaded();
+      }} else if (Date.now() < root._bokeh_timeout) {
+      setTimeout(run_inline_js, 100);
+    } else if (!root._bokeh_failed_load) {
+      console.log("Bokeh: BokehJS failed to load within specified timeout.");
+      root._bokeh_failed_load = true;
+    } else if (force !== true) {
+      const cell = $(document.getElementById("eeadbde8-7974-492d-b5be-6d99ba38e25c")).parents('.cell').data().cell;
+      cell.output_area.append_execute_result(NB_LOAD_WARNING)
+    }
+  }
+
+  if (root._bokeh_is_loading === 0) {
+    console.debug("Bokeh: BokehJS loaded, going straight to plotting");
+    run_inline_js();
+  } else {
+    load_libs(css_urls, js_urls, function() {
+      console.debug("Bokeh: BokehJS plotting callback run at", now());
+      run_inline_js();
+    });
+  }
+}(window));</script></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">SPECIES</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">species</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
+<span class="n">MARKERS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;hex&#39;</span><span class="p">,</span> <span class="s1">&#39;circle_x&#39;</span><span class="p">,</span> <span class="s1">&#39;triangle&#39;</span><span class="p">]</span>
+
+<span class="n">p</span> <span class="o">=</span> <span class="n">figure</span><span class="p">(</span><span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Penguin size&quot;</span><span class="p">,</span> <span class="n">background_fill_color</span><span class="o">=</span><span class="s2">&quot;#fafafa&quot;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">axis_label</span> <span class="o">=</span> <span class="s1">&#39;Flipper Length (mm)&#39;</span>
+<span class="n">p</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">axis_label</span> <span class="o">=</span> <span class="s1">&#39;Body Mass (g)&#39;</span>
+
+<span class="n">p</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="s2">&quot;flipper_length_mm&quot;</span><span class="p">,</span> <span class="s2">&quot;body_mass_g&quot;</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="n">data</span><span class="p">,</span>
+          <span class="n">legend_group</span><span class="o">=</span><span class="s2">&quot;species&quot;</span><span class="p">,</span> <span class="n">fill_alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span>
+          <span class="n">marker</span><span class="o">=</span><span class="n">factor_mark</span><span class="p">(</span><span class="s1">&#39;species&#39;</span><span class="p">,</span> <span class="n">MARKERS</span><span class="p">,</span> <span class="n">SPECIES</span><span class="p">),</span>
+          <span class="n">color</span><span class="o">=</span><span class="n">factor_cmap</span><span class="p">(</span><span class="s1">&#39;species&#39;</span><span class="p">,</span> <span class="s1">&#39;Category10_3&#39;</span><span class="p">,</span> <span class="n">SPECIES</span><span class="p">))</span>
+
+<span class="n">p</span><span class="o">.</span><span class="n">legend</span><span class="o">.</span><span class="n">location</span> <span class="o">=</span> <span class="s2">&quot;top_left&quot;</span>
+<span class="n">p</span><span class="o">.</span><span class="n">legend</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Species&quot;</span>
+
+<span class="n">show</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="f931ad9b-4cb9-4378-be6a-e290fc109af1" data-root-id="p1001" style="display: contents;"></div>
+</div><script type="application/javascript">(function(root) {
+  function embed_document(root) {
+  const docs_json = {"3a37cae4-4c95-4660-a53e-18019e0590fd":{"version":"3.6.0","title":"Bokeh Application","roots":[{"type":"object","name":"Figure","id":"p1001","attributes":{"x_range":{"type":"object","name":"DataRange1d","id":"p1002"},"y_range":{"type":"object","name":"DataRange1d","id":"p1003"},"x_scale":{"type":"object","name":"LinearScale","id":"p1011"},"y_scale":{"type":"object","name":"LinearScale","id":"p1012"},"title":{"type":"object","name":"Title","id":"p1004","attributes":{"text":"Penguin size"}},"renderers":[{"type":"object","name":"GlyphRenderer","id":"p1047","attributes":{"data_source":{"type":"object","name":"ColumnDataSource","id":"p1038","attributes":{"selected":{"type":"object","name":"Selection","id":"p1039","attributes":{"indices":[],"line_indices":[]}},"selection_policy":{"type":"object","name":"UnionRenderers","id":"p1040"},"data":{"type":"map","entries":[["index",{"type":"ndarray","array":{"type":"bytes","data":"AAAAAAEAAAACAAAAAwAAAAQAAAAFAAAABgAAAAcAAAAIAAAACQAAAAoAAAALAAAADAAAAA0AAAAOAAAADwAAABAAAAARAAAAEgAAABMAAAAUAAAAFQAAABYAAAAXAAAAGAAAABkAAAAaAAAAGwAAABwAAAAdAAAAHgAAAB8AAAAgAAAAIQAAACIAAAAjAAAAJAAAACUAAAAmAAAAJwAAACgAAAApAAAAKgAAACsAAAAsAAAALQAAAC4AAAAvAAAAMAAAADEAAAAyAAAAMwAAADQAAAA1AAAANgAAADcAAAA4AAAAOQAAADoAAAA7AAAAPAAAAD0AAAA+AAAAPwAAAEAAAABBAAAAQgAAAEMAAABEAAAARQAAAEYAAABHAAAASAAAAEkAAABKAAAASwAAAEwAAABNAAAATgAAAE8AAABQAAAAUQAAAFIAAABTAAAAVAAAAFUAAABWAAAAVwAAAFgAAABZAAAAWgAAAFsAAABcAAAAXQAAAF4AAABfAAAAYAAAAGEAAABiAAAAYwAAAGQAAABlAAAAZgAAAGcAAABoAAAAaQAAAGoAAABrAAAAbAAAAG0AAABuAAAAbwAAAHAAAABxAAAAcgAAAHMAAAB0AAAAdQAAAHYAAAB3AAAAeAAAAHkAAAB6AAAAewAAAHwAAAB9AAAAfgAAAH8AAACAAAAAgQAAAIIAAACDAAAAhAAAAIUAAACGAAAAhwAAAIgAAACJAAAAigAAAIsAAACMAAAAjQAAAI4AAACPAAAAkAAAAJEAAACSAAAAkwAAAJQAAACVAAAAlgAAAJcAAACYAAAAmQAAAJoAAACbAAAAnAAAAJ0AAACeAAAAnwAAAKAAAAChAAAAogAAAKMAAACkAAAApQAAAKYAAACnAAAAqAAAAKkAAACqAAAAqwAAAKwAAACtAAAArgAAAK8AAACwAAAAsQAAALIAAACzAAAAtAAAALUAAAC2AAAAtwAAALgAAAC5AAAAugAAALsAAAC8AAAAvQAAAL4AAAC/AAAAwAAAAMEAAADCAAAAwwAAAMQAAADFAAAAxgAAAMcAAADIAAAAyQAAAMoAAADLAAAAzAAAAM0AAADOAAAAzwAAANAAAADRAAAA0gAAANMAAADUAAAA1QAAANYAAADXAAAA2AAAANkAAADaAAAA2wAAANwAAADdAAAA3gAAAN8AAADgAAAA4QAAAOIAAADjAAAA5AAAAOUAAADmAAAA5wAAAOgAAADpAAAA6gAAAOsAAADsAAAA7QAAAO4AAADvAAAA8AAAAPEAAADyAAAA8wAAAPQAAAD1AAAA9gAAAPcAAAD4AAAA+QAAAPoAAAD7AAAA/AAAAP0AAAD+AAAA/wAAAAABAAABAQAAAgEAAAMBAAAEAQAABQEAAAYBAAAHAQAACAEAAAkBAAAKAQAACwEAAAwBAAANAQAADgEAAA8BAAAQAQAAEQEAABIBAAATAQAAFAEAABUBAAAWAQAAFwEAABgBAAAZAQAAGgEAABsBAAAcAQAAHQEAAB4BAAAfAQAAIAEAACEBAAAiAQAAIwEAACQBAAAlAQAAJgEAACcBAAAoAQAAKQEAACoBAAArAQAALAEAAC0BAAAuAQAALwEAADABAAAxAQAAMgEAADMBAAA0AQAANQEAADYBAAA3AQAAOAEAADkBAAA6AQAAOwEAADwBAAA9AQAAPgEAAD8BAABAAQAAQQEAAEIBAABDAQAARAEAAEUBAABGAQAARwEAAEgBAABJAQAASgEAAEsBAABMAQAATQEAAE4BAABPAQAAUAEAAFEBAABSAQAAUwEAAFQBAABVAQAAVgEAAFcBAAA="},"shape":[344],"dtype":"int32","order":"little"}],["species",{"type":"ndarray","array":["Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo"],"shape":[344],"dtype":"object","order":"little"}],["island",{"type":"ndarray","array":["Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe"],"shape":[344],"dtype":"object","order":"little"}],["bill_length_mm",{"type":"ndarray","array":{"type":"bytes","data":"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"},"shape":[344],"dtype":"float64","order":"little"}],["bill_depth_mm",{"type":"ndarray","array":{"type":"bytes","data":"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"},"shape":[344],"dtype":"float64","order":"little"}],["flipper_length_mm",{"type":"ndarray","array":{"type":"bytes","data":"AAAAAACgZkAAAAAAAEBnQAAAAAAAYGhAAAAAAAAA+H8AAAAAACBoQAAAAAAAwGdAAAAAAACgZkAAAAAAAGBoQAAAAAAAIGhAAAAAAADAZ0AAAAAAAEBnQAAAAAAAgGZAAAAAAADAZkAAAAAAAOBnQAAAAAAAwGhAAAAAAAAgZ0AAAAAAAGBoQAAAAAAAoGhAAAAAAAAAZ0AAAAAAAEBoQAAAAAAAwGVAAAAAAACAZkAAAAAAAKBnQAAAAAAAIGdAAAAAAACAZkAAAAAAAGBnQAAAAAAA4GZAAAAAAABgZ0AAAAAAAIBlQAAAAAAAgGZAAAAAAABAZkAAAAAAAEBmQAAAAAAAgGdAAAAAAAAAZ0AAAAAAAGBoQAAAAAAAgGhAAAAAAADAZ0AAAAAAAIBmQAAAAAAAoGZAAAAAAAAAZ0AAAAAAAMBmQAAAAAAAYGhAAAAAAABAZ0AAAAAAAIBoQAAAAAAAIGdAAAAAAADAZ0AAAAAAAMBmQAAAAAAAYGZAAAAAAADAZ0AAAAAAAOBnQAAAAAAAQGdAAAAAAACAZ0AAAAAAAMBnQAAAAAAAAGlAAAAAAABgZ0AAAAAAAOBnQAAAAAAAQGdAAAAAAAAgaEAAAAAAAKBmQAAAAAAAQGhAAAAAAAAgZ0AAAAAAAGBoQAAAAAAAIGdAAAAAAAAAaEAAAAAAAABnQAAAAAAAAGhAAAAAAABgaEAAAAAAAIBnQAAAAAAAwGdAAAAAAADAaEAAAAAAAMBnQAAAAAAAwGdAAAAAAACAaEAAAAAAAKBoQAAAAAAAwGdAAAAAAABgaEAAAAAAAOBnQAAAAAAAAGdAAAAAAABgZ0AAAAAAAGBoQAAAAAAAoGdAAAAAAACAaEAAAAAAAGBnQAAAAAAAIGhAAAAAAADgZ0AAAAAAAEBoQAAAAAAAwGdAAAAAAACgZ0AAAAAAAKBnQAAAAAAAwGdAAAAAAABAaUAAAAAAAKBpQAAAAAAAIGdAAAAAAABAZ0AAAAAAAGBnQAAAAAAAAGpAAAAAAADAZ0AAAAAAAIBoQAAAAAAAQGZAAAAAAAAAaEAAAAAAAABoQAAAAAAAYGlAAAAAAADgZkAAAAAAAMBnQAAAAAAAIGhAAAAAAAAAZ0AAAAAAAOBoQAAAAAAAwGdAAAAAAACgZkAAAAAAAKBoQAAAAAAAwGhAAAAAAADgZ0AAAAAAACBoQAAAAAAAoGhAAAAAAADgZ0AAAAAAAIBoQAAAAAAAgGdAAAAAAADgaEAAAAAAAKBnQAAAAAAAoGdAAAAAAABgZ0AAAAAAAMBoQAAAAAAAAGZAAAAAAABAaUAAAAAAAEBnQAAAAAAA4GhAAAAAAADgZ0AAAAAAAGBoQAAAAAAA4GdAAAAAAABAakAAAAAAAMBnQAAAAAAAoGhAAAAAAAAgaEAAAAAAAOBoQAAAAAAAYGdAAAAAAADAZ0AAAAAAAOBnQAAAAAAAAGlAAAAAAAAgZ0AAAAAAACBoQAAAAAAAIGhAAAAAAABgZ0AAAAAAAIBnQAAAAAAAwGdAAAAAAAAAaEAAAAAAACBnQAAAAAAAwGdAAAAAAAAAZ0AAAAAAAGBoQAAAAAAAIGhAAAAAAABgZ0AAAAAAACBpQAAAAAAAAGhAAAAAAACAaEAAAAAAACBoQAAAAAAAgGdAAAAAAACgaEAAAAAAAMBoQAAAAAAAQGZAAAAAAACgaEAAAAAAAGBoQAAAAAAAwGhAAAAAAAAgaEAAAAAAAEBoQAAAAAAAIGdAAAAAAAAgaUAAAAAAAMBnQAAAAAAAIGlAAAAAAACgaEAAAAAAAKBmQAAAAAAAwGdAAAAAAABgaEAAAAAAAKBmQAAAAAAA4GdAAAAAAABgZ0AAAAAAACBoQAAAAAAAYGhAAAAAAACgaEAAAAAAAABpQAAAAAAAAGlAAAAAAADgZ0AAAAAAAKBpQAAAAAAAYGdAAAAAAAAgaUAAAAAAAGBnQAAAAAAAYGlAAAAAAABgaEAAAAAAAOBoQAAAAAAAYGhAAAAAAABAakAAAAAAAABoQAAAAAAAoGlAAAAAAABAakAAAAAAAGBnQAAAAAAAgGhAAAAAAACAaEAAAAAAAIBoQAAAAAAAIGlAAAAAAADAZ0AAAAAAAIBqQAAAAAAAYGdAAAAAAADAaEAAAAAAAOBoQAAAAAAAIGlAAAAAAAAgaEAAAAAAAGBpQAAAAAAAYGdAAAAAAACgaEAAAAAAAOBnQAAAAAAAYGlAAAAAAABAaUAAAAAAAEBoQAAAAAAAwGlAAAAAAACgZ0AAAAAAAGBoQAAAAAAA4GlAAAAAAABAaUAAAAAAACBoQAAAAAAAQGpAAAAAAADAaEAAAAAAAGBqQAAAAAAAwGxAAAAAAABAakAAAAAAAEBrQAAAAAAA4GpAAAAAAABAakAAAAAAAGBqQAAAAAAAYGtAAAAAAAAgakAAAAAAAOBqQAAAAAAAwGpAAAAAAAAAa0AAAAAAAMBqQAAAAAAAoGpAAAAAAABAakAAAAAAACBrQAAAAAAAQGpAAAAAAACga0AAAAAAACBqQAAAAAAAwGtAAAAAAABAa0AAAAAAAOBqQAAAAAAAoGpAAAAAAADgakAAAAAAAOBqQAAAAAAA4GpAAAAAAAAAa0AAAAAAAOBqQAAAAAAAQGpAAAAAAACAa0AAAAAAAMBrQAAAAAAAIGpAAAAAAADgaUAAAAAAAMBsQAAAAAAAgGtAAAAAAACAa0AAAAAAAKBqQAAAAAAAYGtAAAAAAAAAakAAAAAAAABqQAAAAAAAAGpAAAAAAAAgbEAAAAAAAEBqQAAAAAAAAGtAAAAAAADAa0AAAAAAACBrQAAAAAAAQGpAAAAAAAAgbEAAAAAAAKBqQAAAAAAA4GpAAAAAAABAakAAAAAAAIBrQAAAAAAAQGpAAAAAAAAgbEAAAAAAACBrQAAAAAAAgGtAAAAAAAAAakAAAAAAAIBrQAAAAAAAAGpAAAAAAAAAbEAAAAAAAABqQAAAAAAAoGtAAAAAAADAakAAAAAAAOBsQAAAAAAAYGtAAAAAAADAbEAAAAAAAMBqQAAAAAAAoGxAAAAAAACAa0AAAAAAAOBrQAAAAAAAAGtAAAAAAACga0AAAAAAAKBrQAAAAAAAIGtAAAAAAAAAa0AAAAAAAMBsQAAAAAAAIGpAAAAAAACAa0AAAAAAAOBqQAAAAAAA4GtAAAAAAACAakAAAAAAAKBrQAAAAAAAgGpAAAAAAAAAbEAAAAAAAIBqQAAAAAAAgGxAAAAAAABAa0AAAAAAAEBrQAAAAAAAgGpAAAAAAADAbEAAAAAAAEBrQAAAAAAAgGxAAAAAAACAakAAAAAAAABsQAAAAAAAwGpAAAAAAABAbEAAAAAAAABrQAAAAAAAwGtAAAAAAABgaUAAAAAAACBsQAAAAAAAYGtAAAAAAACAbEAAAAAAAOBqQAAAAAAAgGxAAAAAAAAAa0AAAAAAAOBqQAAAAAAAQGpAAAAAAABga0AAAAAAAABqQAAAAAAAIGpAAAAAAAAAa0AAAAAAAKBsQAAAAAAAoGpAAAAAAADAbEAAAAAAACBrQAAAAAAAwGxAAAAAAAAga0AAAAAAAMBrQAAAAAAAwGpAAAAAAAAA+H8AAAAAAOBqQAAAAAAAwGtAAAAAAACAakAAAAAAAKBqQA=="},"shape":[344],"dtype":"float64","order":"little"}],["body_mass_g",{"type":"ndarray","array":{"type":"bytes","data":"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"},"shape":[344],"dtype":"float64","order":"little"}],["sex",{"type":"ndarray","array":["MALE","FEMALE","FEMALE",{"type":"number","value":"nan"},"FEMALE","MALE","FEMALE","MALE",{"type":"number","value":"nan"},{"type":"number","value":"nan"},{"type":"number","value":"nan"},{"type":"number","value":"nan"},"FEMALE","MALE","MALE","FEMALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","MALE","FEMALE","MALE","FEMALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","MALE","FEMALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","MALE",{"type":"number","value":"nan"},"FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","MALE","FEMALE","MALE","FEMALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","MALE","FEMALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","MALE","FEMALE","MALE","FEMALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","MALE","FEMALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","MALE","FEMALE","FEMALE","MALE","FEMALE","MALE","MALE","FEMALE","MALE","FEMALE","FEMALE","MALE","FEMALE","MALE","MALE","FEMALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","MALE","FEMALE","MALE","FEMALE","FEMALE","MALE","FEMALE","MALE","MALE","FEMALE","FEMALE","MALE","FEMALE","MALE","MALE","FEMALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","MALE","FEMALE","FEMALE","MALE","FEMALE","MALE",{"type":"number","value":"nan"},"MALE","FEMALE","MALE","MALE","FEMALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","MALE","FEMALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE",{"type":"number","value":"nan"},"MALE","FEMALE","MALE","FEMALE","MALE","MALE","FEMALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","MALE","FEMALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE",{"type":"number","value":"nan"},"MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE","FEMALE","MALE",{"type":"number","value":"nan"},"MALE","FEMALE",{"type":"number","value":"nan"},"FEMALE","MALE","FEMALE","MALE"],"shape":[344],"dtype":"object","order":"little"}]]}}},"view":{"type":"object","name":"CDSView","id":"p1048","attributes":{"filter":{"type":"object","name":"AllIndices","id":"p1049"}}},"glyph":{"type":"object","name":"Scatter","id":"p1044","attributes":{"x":{"type":"field","field":"flipper_length_mm"},"y":{"type":"field","field":"body_mass_g"},"size":{"type":"value","value":12},"line_color":{"type":"field","field":"species","transform":{"type":"object","name":"CategoricalColorMapper","id":"p1037","attributes":{"palette":["#1f77b4","#ff7f0e","#2ca02c"],"factors":["Adelie","Chinstrap","Gentoo"]}}},"fill_color":{"type":"field","field":"species","transform":{"id":"p1037"}},"fill_alpha":{"type":"value","value":0.4},"hatch_color":{"type":"field","field":"species","transform":{"id":"p1037"}},"marker":{"type":"field","field":"species","transform":{"type":"object","name":"CategoricalMarkerMapper","id":"p1036","attributes":{"factors":["Adelie","Chinstrap","Gentoo"],"markers":["hex","circle_x","triangle"]}}}}},"nonselection_glyph":{"type":"object","name":"Scatter","id":"p1045","attributes":{"x":{"type":"field","field":"flipper_length_mm"},"y":{"type":"field","field":"body_mass_g"},"size":{"type":"value","value":12},"line_color":{"type":"field","field":"species","transform":{"id":"p1037"}},"line_alpha":{"type":"value","value":0.1},"fill_color":{"type":"field","field":"species","transform":{"id":"p1037"}},"fill_alpha":{"type":"value","value":0.1},"hatch_color":{"type":"field","field":"species","transform":{"id":"p1037"}},"hatch_alpha":{"type":"value","value":0.1},"marker":{"type":"field","field":"species","transform":{"id":"p1036"}}}},"muted_glyph":{"type":"object","name":"Scatter","id":"p1046","attributes":{"x":{"type":"field","field":"flipper_length_mm"},"y":{"type":"field","field":"body_mass_g"},"size":{"type":"value","value":12},"line_color":{"type":"field","field":"species","transform":{"id":"p1037"}},"line_alpha":{"type":"value","value":0.2},"fill_color":{"type":"field","field":"species","transform":{"id":"p1037"}},"fill_alpha":{"type":"value","value":0.2},"hatch_color":{"type":"field","field":"species","transform":{"id":"p1037"}},"hatch_alpha":{"type":"value","value":0.2},"marker":{"type":"field","field":"species","transform":{"id":"p1036"}}}}}}],"toolbar":{"type":"object","name":"Toolbar","id":"p1010","attributes":{"tools":[{"type":"object","name":"PanTool","id":"p1023"},{"type":"object","name":"WheelZoomTool","id":"p1024","attributes":{"renderers":"auto"}},{"type":"object","name":"BoxZoomTool","id":"p1025","attributes":{"overlay":{"type":"object","name":"BoxAnnotation","id":"p1026","attributes":{"syncable":false,"line_color":"black","line_alpha":1.0,"line_width":2,"line_dash":[4,4],"fill_color":"lightgrey","fill_alpha":0.5,"level":"overlay","visible":false,"left":{"type":"number","value":"nan"},"right":{"type":"number","value":"nan"},"top":{"type":"number","value":"nan"},"bottom":{"type":"number","value":"nan"},"left_units":"canvas","right_units":"canvas","top_units":"canvas","bottom_units":"canvas","handles":{"type":"object","name":"BoxInteractionHandles","id":"p1032","attributes":{"all":{"type":"object","name":"AreaVisuals","id":"p1031","attributes":{"fill_color":"white","hover_fill_color":"lightgray"}}}}}}}},{"type":"object","name":"SaveTool","id":"p1033"},{"type":"object","name":"ResetTool","id":"p1034"},{"type":"object","name":"HelpTool","id":"p1035"}]}},"left":[{"type":"object","name":"LinearAxis","id":"p1018","attributes":{"ticker":{"type":"object","name":"BasicTicker","id":"p1019","attributes":{"mantissas":[1,2,5]}},"formatter":{"type":"object","name":"BasicTickFormatter","id":"p1020"},"axis_label":"Body Mass (g)","major_label_policy":{"type":"object","name":"AllLabels","id":"p1021"}}}],"below":[{"type":"object","name":"LinearAxis","id":"p1013","attributes":{"ticker":{"type":"object","name":"BasicTicker","id":"p1014","attributes":{"mantissas":[1,2,5]}},"formatter":{"type":"object","name":"BasicTickFormatter","id":"p1015"},"axis_label":"Flipper Length (mm)","major_label_policy":{"type":"object","name":"AllLabels","id":"p1016"}}}],"center":[{"type":"object","name":"Grid","id":"p1017","attributes":{"axis":{"id":"p1013"}}},{"type":"object","name":"Grid","id":"p1022","attributes":{"dimension":1,"axis":{"id":"p1018"}}},{"type":"object","name":"Legend","id":"p1050","attributes":{"location":"top_left","title":"Species","items":[{"type":"object","name":"LegendItem","id":"p1051","attributes":{"label":{"type":"value","value":"Adelie"},"renderers":[{"id":"p1047"}],"index":0}},{"type":"object","name":"LegendItem","id":"p1052","attributes":{"label":{"type":"value","value":"Chinstrap"},"renderers":[{"id":"p1047"}],"index":152}},{"type":"object","name":"LegendItem","id":"p1053","attributes":{"label":{"type":"value","value":"Gentoo"},"renderers":[{"id":"p1047"}],"index":220}}]}}],"background_fill_color":"#fafafa"}}]}};
+  const render_items = [{"docid":"3a37cae4-4c95-4660-a53e-18019e0590fd","roots":{"p1001":"f931ad9b-4cb9-4378-be6a-e290fc109af1"},"root_ids":["p1001"]}];
+  void root.Bokeh.embed.embed_items_notebook(docs_json, render_items);
+  }
+  if (root.Bokeh !== undefined) {
+    embed_document(root);
+  } else {
+    let attempts = 0;
+    const timer = setInterval(function(root) {
+      if (root.Bokeh !== undefined) {
+        clearInterval(timer);
+        embed_document(root);
+      } else {
+        attempts++;
+        if (attempts > 100) {
+          clearInterval(timer);
+          console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+        }
+      }
+    }, 10, root)
+  }
+})(window);</script></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Karl Hoitsma.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

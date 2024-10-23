@@ -1,0 +1,174 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>mix_func &mdash; Mathpax Blog  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="unmix_func" href="unmix_function.html" />
+    <link rel="prev" title="interval_filter" href="readme_doc.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: white" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Mathpax Blog
+              <img src="https://khoitsmahq.firstcloudit.com/images/mp_small3.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="readme_doc.html">interval_filter</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">mix_func</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unmix_function.html">unmix_func</a></li>
+<li class="toctree-l1"><a class="reference internal" href="myst_notebook.html">My MyST Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unmix_func_source.html">Model Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unmix_func_source.html#link-to-my-non-sphinx-plotly-html-file">Link to my non-Sphinx Plotly HTML file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unmix_func_source.html#embedded-png-image">Embedded .png image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simple_notebook.html">simple_notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MYST_NB_TEST_BED2.html">MYST_NB_TEST_BED2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bokeh_example.html">bokeh example</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: white" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Mathpax Blog</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">mix_func</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/mix_function.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="readme_doc.html" class="btn btn-neutral float-left" title="interval_filter" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="unmix_function.html" class="btn btn-neutral float-right" title="unmix_func" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="mix-func">
+<h1>mix_func<a class="headerlink" href="#mix-func" title="Link to this heading"></a></h1>
+<p>An example function to provide a list of x random values</p>
+<p>Args:</p>
+<dl class="field-list simple">
+<dt class="field-odd">x<span class="colon">:</span></dt>
+<dd class="field-odd"><p>integer number of values to produce</p>
+</dd>
+</dl>
+<p>Returns:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">an x-length list of random numbers</div>
+</div>
+</div></blockquote>
+<p>Raises:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">zero, if x == 0</div>
+<div class="line">“Function error” if function fails</div>
+</div>
+</div></blockquote>
+<p>Disclosure:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Lifted from Page 56 of <a class="reference external" href="https://www.pyxll.com/docs/pyxll-5.5.4.pdf">https://www.pyxll.com/docs/pyxll-5.5.4.pdf</a></div>
+</div>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">random</span>
+<span class="c1"># @xl_func(&quot;int x: object&lt;skip_primitives=True&gt;&quot;)</span>
+<span class="nd">@xl_func</span><span class="p">(</span><span class="s2">&quot;int x: object&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">mix_func</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return a list of x random values</span>
+<span class="sd">    Args:</span>
+<span class="sd">        x: integer number of values to produce</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        an x-length list of random numbers</span>
+<span class="sd">    Raises:</span>
+<span class="sd">        zero, if x == 0</span>
+<span class="sd">        &quot;Function error&quot; if function fails</span>
+<span class="sd">    Disclosure:</span>
+<span class="sd">        Lifted from Page 56 of https://www.pyxll.com/docs/pyxll-5.5.4.pdf</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="c1"># return as a number to Excel</span>
+            <span class="k">return</span> <span class="mi">0</span>
+
+        <span class="c1"># return a list of values as an &#39;object&#39;</span>
+        <span class="n">array</span> <span class="o">=</span> <span class="p">[</span><span class="n">random</span><span class="p">()</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">x</span><span class="p">)]</span>
+        <span class="k">return</span> <span class="n">array</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;Function error&quot;</span>
+</pre></div>
+</div>
+<p><strong>*Plotly doesn’t seem to work with Sphinx*</strong></p>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Karl Hoitsma.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

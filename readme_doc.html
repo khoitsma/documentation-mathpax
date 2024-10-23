@@ -1,0 +1,273 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>interval_filter &mdash; Mathpax Blog  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="mix_func" href="mix_function.html" />
+    <link rel="prev" title="Table of Contents" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: white" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Mathpax Blog
+              <img src="https://khoitsmahq.firstcloudit.com/images/mp_small3.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">interval_filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mix_function.html">mix_func</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unmix_function.html">unmix_func</a></li>
+<li class="toctree-l1"><a class="reference internal" href="myst_notebook.html">My MyST Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unmix_func_source.html">Model Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unmix_func_source.html#link-to-my-non-sphinx-plotly-html-file">Link to my non-Sphinx Plotly HTML file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unmix_func_source.html#embedded-png-image">Embedded .png image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simple_notebook.html">simple_notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MYST_NB_TEST_BED2.html">MYST_NB_TEST_BED2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bokeh_example.html">bokeh example</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: white" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Mathpax Blog</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">interval_filter</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/readme_doc.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="index.html" class="btn btn-neutral float-left" title="Table of Contents" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="mix_function.html" class="btn btn-neutral float-right" title="mix_func" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="interval-filter">
+<h1>interval_filter<a class="headerlink" href="#interval-filter" title="Link to this heading"></a></h1>
+<p>An example statistical function using Python and <a class="reference external" href="https://www.pyxll.com">PyXLL</a></p>
+<blockquote class="epigraph">
+<div><div class="line-block">
+<div class="line">What is the probability that you will have</div>
+</div>
+<div class="line-block">
+<div class="line">… exactly 7 heads out of a total of 10 coin tosses?</div>
+<div class="line">… or exactly 14 heads out of a total of 20 coin tosses?</div>
+</div>
+</div></blockquote>
+<p>Return a list of lists <strong>counting</strong> and <strong>comparing the number</strong> of runs with each possible length</p>
+<dl class="field-list simple">
+<dt class="field-odd">x<span class="colon">:</span></dt>
+<dd class="field-odd"><p>integer number of values per run</p>
+</dd>
+<dt class="field-even">n<span class="colon">:</span></dt>
+<dd class="field-even"><p>integer number of runs</p>
+</dd>
+<dt class="field-odd">decimal_places<span class="colon">:</span></dt>
+<dd class="field-odd"><p>decimal places in ratio result</p>
+</dd>
+</dl>
+<p>Returns:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">an Excel range (3 columns by x+1 rows)</div>
+<div class="line">column 1 — all possible values of counter function (0 to x)</div>
+<div class="line">column 2 — count of runs for each possible value</div>
+<div class="line">column 3 — ratio of each specific count of runs to total runs, n</div>
+</div>
+</div></blockquote>
+<p>Raises:
+“Function error” if the function fails</p>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">stats_X</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">50000</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>returns</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-right"><p>x_len</p></th>
+<th class="head text-right"><p>count</p></th>
+<th class="head text-right"><p>ratio</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-right"><p>0</p></td>
+<td class="text-right"><p>47</p></td>
+<td class="text-right"><p>0.001</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>1</p></td>
+<td class="text-right"><p>489</p></td>
+<td class="text-right"><p>0.010</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>2</p></td>
+<td class="text-right"><p>2224</p></td>
+<td class="text-right"><p>0.044</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>3</p></td>
+<td class="text-right"><p>5882</p></td>
+<td class="text-right"><p>0.118</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>4</p></td>
+<td class="text-right"><p>10232</p></td>
+<td class="text-right"><p>0.205</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>5</p></td>
+<td class="text-right"><p>12299</p></td>
+<td class="text-right"><p>0.246</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>6</p></td>
+<td class="text-right"><p>10183</p></td>
+<td class="text-right"><p>0.204</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>7</p></td>
+<td class="text-right"><p>5933</p></td>
+<td class="text-right"><p>0.119</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>8</p></td>
+<td class="text-right"><p>2135</p></td>
+<td class="text-right"><p>0.043</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>9</p></td>
+<td class="text-right"><p>533</p></td>
+<td class="text-right"><p>0.011</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>10</p></td>
+<td class="text-right"><p>43</p></td>
+<td class="text-right"><p>0.001</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>sums</p></td>
+<td class="text-right"><p>50000</p></td>
+<td class="text-right"><p>1.000</p></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<hr class="docutils" />
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@xl_func</span><span class="p">(</span><span class="s2">&quot;int x, int n, int decimal_places: var&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">stats_X</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">decimal_places</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return a list of lists counting and comparing number of runs with each possible length</span>
+
+<span class="sd">    :param x: integer number of values per run</span>
+<span class="sd">    :param n: integer number of runs</span>
+<span class="sd">    :param decimal_places: decimal places in ratio result</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        a 3-column by x-row range</span>
+<span class="sd">        column 1: possible values of counter function</span>
+<span class="sd">        column 2: count of runs for each possible value</span>
+<span class="sd">        column 3: ratio of specific count of runs to total runs, n</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        &quot;Function error&quot; if function fails</span>
+
+<span class="sd">    Example:</span>
+
+<span class="sd">        = stats_X(10,50000,3) returns</span>
+
+<span class="sd">        0:     47  0.001</span>
+<span class="sd">        1:    489  0.010</span>
+<span class="sd">        2:   2224  0.044</span>
+<span class="sd">        3:   5882  0.118</span>
+<span class="sd">        4:  10232  0.205</span>
+<span class="sd">        5:  12299  0.246</span>
+<span class="sd">        6:  10183  0.204</span>
+<span class="sd">        7:   5933  0.119</span>
+<span class="sd">        8:   2135  0.043</span>
+<span class="sd">        9:    533  0.011</span>
+<span class="sd">        10:    43  0.001</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># consider x might be a list or an int</span>
+        <span class="c1"># this avoids the error from len(an_integer)</span>
+        <span class="n">len_int_or_list</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">0</span> <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+        <span class="n">results</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="c1"># note: next line is continued</span>
+        <span class="n">results</span> <span class="o">=</span> <span class="p">[</span><span class="n">len_int_or_list</span><span class="p">(</span><span class="n">filter_int_comp_list_X</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="s1">&#39;oo&#39;</span><span class="p">,</span> <span class="n">mix_func</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span> \
+                   <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
+
+        <span class="n">counts</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+
+        <span class="n">output</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="c1"># collect all the counts and ratios into a list of lists</span>
+        <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+            <span class="n">output</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="n">counts</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">KLHfloatround</span><span class="p">(</span><span class="n">counts</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span><span class="o">/</span><span class="n">n</span><span class="p">,</span><span class="n">decimal_places</span><span class="p">)])</span>
+        <span class="k">return</span> <span class="n">output</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;Function error&#39;</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Karl Hoitsma.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
