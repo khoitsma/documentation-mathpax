@@ -18,7 +18,8 @@ jobs:
         run: |
           export PATH=$PATH:~/.local/bin
           pip install Sphinx
-          pip install sphinx sphinx_rtd_theme
+          # pip install sphinx sphinx_rtd_theme
+          pip install sphinx-rtd-theme
           pip install sphinx-bootstrap-theme
           pip install sphinx-book-theme
           pip install cloud_sptheme
