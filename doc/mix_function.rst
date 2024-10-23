@@ -28,8 +28,6 @@ Disclosure:
 
 % Plotly doesn't work with Sphinx
 .. plotly::
-   :iframe-width: 500px
-   :iframe-height: 300px
 
    import plotly.express as px
    fig = px.bar(x=["a", "b", "c"], y=[1, 3, 2])
