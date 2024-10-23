@@ -100,12 +100,12 @@ myst_heading_anchors = 7
 # html_theme = 'classic'
 html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
 
-html_theme = "sphinx_book_theme"
+# html_theme = "sphinx_book_theme"
 
-html_theme_options = {
-    # Disable showing the sidebar. Defaults to 'false'
-    'nosidebar': False,
-}
+# html_theme_options = {
+#     # Disable showing the sidebar. Defaults to 'false'
+#     'nosidebar': False,
+# }
 
 # # Configuration file for the Sphinx documentation builder.
 # #
